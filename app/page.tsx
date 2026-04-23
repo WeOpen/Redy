@@ -33,7 +33,7 @@ const visualItems = [
   },
   {
     title: '图形语言',
-    body: 'Git 分支线、水果隐喻系统与像素笔刷尾巴，让角色系统能够延展到页面和运营物料。',
+    body: 'Git 分支线、三项目识别系统与像素笔刷尾巴，让角色系统能够延展到页面和运营物料。',
   },
 ];
 
@@ -49,11 +49,15 @@ const palette = [
 const useCases = [
   {
     title: '官网 Hero',
-    body: '用园丁场景建立第一印象，把开源森林与品牌人格放在同一张视觉中。',
+    body: '用园丁场景建立第一印象，把 Redy 与 WeMail、WeGit、WeOpen 三项目生态放在同一张视觉中。',
   },
   {
     title: 'GitHub Header',
-    body: '左侧角色、中部 Git 分支、右侧品牌字锁，适合组织主页和仓库形象统一。',
+    body: '左侧角色、中部 Git 分支与项目节点、右侧品牌字锁，适合组织主页和仓库形象统一。',
+  },
+  {
+    title: 'README / Badge',
+    body: '让 WeMail、WeGit、WeOpen 在同一母品牌下拥有可区分的图标、Badge 与头图资产。',
   },
   {
     title: 'CLI 欢迎界面',
@@ -62,10 +66,6 @@ const useCases = [
   {
     title: '404 / 异常页',
     body: '用 Q 版 Redy 的观察姿态表达“路径尚未被合并”的轻量反馈。',
-  },
-  {
-    title: '社区介绍页',
-    body: '把角色故事、活动 KV、贡献指南与贴纸体系连接成统一品牌体验。',
   },
 ];
 
@@ -136,7 +136,7 @@ export default function HomePage() {
           <div className="hero__visual-note">
             <img alt="Redy Logo Lockup" src={logoLockup.src} />
             <p>
-              一只在开源森林里持续观察分支、挑选成果、维护生态温度的红熊猫。
+              一只在开源森林里持续观察分支、连接 WeMail、WeGit、WeOpen 三项目生态并维护协作温度的红熊猫。
             </p>
           </div>
         </div>
@@ -158,7 +158,7 @@ export default function HomePage() {
               README 将 Redy 定义为 WeOpen 开源生态维护者 / 代码园丁 / 分支探险家。它来自 Red 与 Ready，代表准备就绪、可靠、可协作的品牌气质。
             </p>
             <p>
-              它穿梭在代码森林中，持续 cherry-pick 最值得被保留与生长的部分，让开源协作更温暖、更可靠，也更 Ready。
+              在最新方案里，Redy 不再使用水果隐喻来映射项目，而是直接连接 WeMail、WeGit、WeOpen 三个核心项目，让品牌叙事和实际产品生态保持一致。
             </p>
           </div>
           <div className="story-tags">
@@ -172,7 +172,7 @@ export default function HomePage() {
             </div>
             <div className="note-card reveal-card">
               <strong>分支探险家</strong>
-              <p>将 Git 分支、挑选与合并变成 Redy 的叙事语言。</p>
+              <p>将 Git 分支、项目节点与协作演化变成 Redy 的叙事语言。</p>
             </div>
           </div>
         </div>
