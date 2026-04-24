@@ -17,9 +17,9 @@
 ## 3. 第一批必须交付
 
 ### 3.1 母品牌基础资产
-- [ ] Redy 主 Logo
-- [ ] Redy 极简头像
-- [ ] Redy 标准立绘
+- [x] Redy 主 Logo
+- [x] Redy 极简头像
+- [x] Redy 标准立绘
 - [ ] Redy Q 版迷你版
 - [ ] GitHub Header 首版
 - [ ] 官网 Hero 主视觉首版
@@ -66,9 +66,9 @@
 ## 5. 推荐文件清单
 
 ### 5.1 母品牌
-- [ ] `brand/logo/weopen-redy-primary.svg`
-- [ ] `brand/logo/weopen-redy-avatar.png`
-- [ ] `brand/mascot/standard/redy-full-body.png`
+- [x] `brand/logo/weopen-redy-primary.svg`
+- [x] `brand/logo/weopen-redy-avatar.png`
+- [x] `brand/mascot/standard/redy-full-body.png`
 - [ ] `brand/mascot/chibi/redy-chibi.png`
 - [ ] `brand/scenes/github-header-weopen.png`
 
@@ -97,7 +97,7 @@
 - [ ] 审核 GitHub Header 与官网 Hero 总方向
 
 ### 插画 / 吉祥物设计
-- [ ] 输出标准立绘
+- [x] 输出标准立绘
 - [ ] 输出园丁场景版
 - [ ] 输出 404 困惑版
 - [ ] 输出贴纸初版
@@ -139,9 +139,9 @@
 ## 9. 可执行 TODO 路线表
 
 ### 阶段 1：母品牌基线收敛
-- [ ] 确认 Redy 主 Logo 最终版
-- [ ] 确认 Redy 极简头像最终版
-- [ ] 确认 Redy 标准立绘最终版
+- [x] 确认 Redy 主 Logo 最终版
+- [x] 确认 Redy 极简头像最终版
+- [x] 确认 Redy 标准立绘最终版
 - [ ] 确认主色板与三项目强调色规范
 - [ ] 确认 Redy 三视图与核心结构说明
 - [ ] 输出第一版母品牌规范页
@@ -259,8 +259,8 @@
 **建议负责人：** 品牌 / 主视觉设计
 
 **包含任务：**
-- [ ] T01 锁定 Redy 主 Logo 最终版
-- [ ] T02 锁定 Redy 极简头像最终版
+- [x] T01 锁定 Redy 主 Logo 最终版
+- [x] T02 锁定 Redy 极简头像最终版
 - [ ] T04 确认主色板与三项目强调色规范
 
 **今天完成后的可见结果：**
@@ -272,7 +272,7 @@
 **建议负责人：** 插画设计
 
 **包含任务：**
-- [ ] T03 锁定 Redy 标准立绘最终版
+- [x] T03 锁定 Redy 标准立绘最终版
 
 **今天完成后的可见结果：**
 - 后续 GitHub Header、404、贴纸、动效都有统一角色基准
@@ -311,7 +311,7 @@
 
 ## 14. 今日结束时建议检查点
 
-- [ ] Redy 主 Logo、极简头像、标准立绘均已有方向稿
+- [x] Redy 主 Logo、极简头像、标准立绘均已有方向稿
 - [ ] 三项目主图标至少有第一轮草图
 - [ ] WeMail 蜡封元素已经进入图标或视觉草图
 - [ ] 品牌规范页已经开始沉淀，而不是只停留在总方案文档里
