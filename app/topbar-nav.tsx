@@ -67,7 +67,6 @@ export default function TopbarNav({ items }: TopbarNavProps) {
           aria-label={isMenuOpen ? '收起页面导航' : '打开页面导航'}
           onClick={() => setIsMenuOpen((current) => !current)}
         >
-          <span className="topnav__menu-label">导航</span>
           <span className="topnav__menu-icon" aria-hidden="true">
             <span />
             <span />

@@ -1,4 +1,4 @@
-import { readFile } from 'node:fs/promises';
+import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import { pathToFileURL } from 'node:url';
 
@@ -87,6 +87,12 @@ export function toEnvReadErrorMessage(error: unknown): string {
   }
 
   return 'Failed to read .env.local.';
+}
+
+export function buildImageOutputPath(imageUrl: string, cwd: string): string {
+  const parsedUrl = new URL(imageUrl);
+  const fileName = path.basename(parsedUrl.pathname) || `generated-${Date.now()}.png`;
+  return path.join(cwd, 'image', fileName);
 }
 
 export function normalizeGenerationPayload(input: GenerationPayloadInput): GenerationPayload {
@@ -217,7 +223,29 @@ async function main(): Promise<void> {
     }
 
     const result = await response.json() as { data?: Array<{ b64_json?: string }> };
-    process.stdout.write(`${JSON.stringify({ ok: true, urls: extractImageUrls(result) })}\n`);
+    const urls = extractImageUrls(result);
+    const cwd = process.cwd();
+    const imageDir = path.join(cwd, 'image');
+    const saved: string[] = [];
+
+    if (urls.length > 0) {
+      await mkdir(imageDir, { recursive: true });
+    }
+
+    for (const imageUrl of urls) {
+      const outputPath = buildImageOutputPath(imageUrl, cwd);
+      const imageResponse = await fetch(imageUrl);
+
+      if (!imageResponse.ok) {
+        throw new Error(`Failed to download generated image with status ${imageResponse.status}.`);
+      }
+
+      const buffer = Buffer.from(await imageResponse.arrayBuffer());
+      await writeFile(outputPath, buffer);
+      saved.push(outputPath);
+    }
+
+    process.stdout.write(`${JSON.stringify({ ok: true, urls, files: saved })}\n`);
   } catch (error) {
     const message = error instanceof Error ? error.message : 'Unknown error.';
     process.stdout.write(`${JSON.stringify({ ok: false, error: message })}\n`);

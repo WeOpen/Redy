@@ -22,4 +22,5 @@ Run:
 
 Return:
 - the generated image URLs on success
+- the local saved file paths under `image/` on success
 - a clear error message on failure

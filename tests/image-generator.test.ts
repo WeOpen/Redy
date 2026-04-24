@@ -1,6 +1,8 @@
 import { describe, expect, it } from 'vitest';
+import path from 'node:path';
 import { pathToFileURL } from 'node:url';
 import {
+  buildImageOutputPath,
   extractImageUrls,
   isCliEntrypoint,
   normalizeGenerationPayload,
@@ -43,6 +45,15 @@ describe('image generator helpers', () => {
     expect(toEnvReadErrorMessage(new Error('EACCES: permission denied'))).toBe(
       'Failed to read .env.local: EACCES: permission denied',
     );
+  });
+
+  it('builds a local image output path inside the image directory', () => {
+    const outputPath = buildImageOutputPath(
+      'http://154.36.152.121:9000/local/chatgpt/images/image-edit-abc.png',
+      'D:/repo',
+    );
+
+    expect(outputPath).toBe(path.join('D:/repo', 'image', 'image-edit-abc.png'));
   });
 
   it('normalizes all documented optional generation parameters', () => {
