@@ -2,5 +2,9 @@ node_modules
 .next
 coverage
 out
-.claude
+.claude/*
+!.claude/skills/
+!.claude/skills/image-generator/
+!.claude/skills/image-generator/SKILL.md
 .spec-workflow
+.env.local
