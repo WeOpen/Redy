@@ -105,12 +105,16 @@ describe('HomePage', () => {
     expect(screen.getByRole('link', { name: /品牌文案/i })).toHaveAttribute('href', '#voice');
   });
 
-  it('links the footer call to action to the repository URL', () => {
+  it('renders a floating action dock for scroll-to-top and repository navigation', () => {
     render(<HomePage />);
 
-    expect(screen.getByRole('link', { name: /Explore the repository/i })).toHaveAttribute(
+    expect(screen.getByRole('link', { name: /回到顶部/i })).toHaveAttribute('href', '#hero');
+    expect(screen.getByRole('link', { name: /打开 github 仓库/i })).toHaveAttribute(
       'href',
       'https://github.com/WeOpen/Redy',
     );
+
+    const dock = document.querySelector('.floating-actions');
+    expect(dock).not.toBeNull();
   });
 });
