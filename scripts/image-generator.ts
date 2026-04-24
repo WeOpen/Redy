@@ -116,7 +116,7 @@ export function normalizeGenerationPayload(input: GenerationPayloadInput): Gener
 
   const timeoutValue = input.timeout_sec ?? 300;
 
-  if (!Number.isInteger(timeoutValue) || timeoutValue < 10 || timeoutValue > 1800) {
+  if (typeof timeoutValue !== 'number' || !Number.isInteger(timeoutValue) || timeoutValue < 10 || timeoutValue > 1800) {
     throw new Error('timeout_sec must be between 10 and 1800.');
   }
 
