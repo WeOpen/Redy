@@ -25,25 +25,25 @@
 - [ ] 官网 Hero 主视觉首版
 
 ### 3.2 三项目基础识别资产
-- [ ] WeMail 主图标
-- [ ] WeMail 极简图标（信封 / 蜡封抽象版）
-- [ ] WeMail Badge
+- [x] WeMail 主图标
+- [x] WeMail 极简图标（信封 / 蜡封抽象版）
+- [x] WeMail Badge
 - [ ] WeMail README 头图
-- [ ] WeGit 主图标
-- [ ] WeGit 极简图标（分支线 / 提交节点抽象版）
-- [ ] WeGit Badge
+- [x] WeGit 主图标
+- [x] WeGit 极简图标（分支线 / 提交节点抽象版）
+- [x] WeGit Badge
 - [ ] WeGit README 头图
-- [ ] WeOpen 主图标
-- [ ] WeOpen 极简图标（模块卡片 / 控制台抽象版）
-- [ ] WeOpen Badge
+- [x] WeOpen 主图标
+- [x] WeOpen 极简图标（模块卡片 / 控制台抽象版）
+- [x] WeOpen Badge
 - [ ] WeOpen README 头图
 
 ### 3.3 规范与对接资产
-- [ ] 品牌色板文件
-- [ ] Token 文件
-- [ ] 图标导出规范
+- [x] 品牌色板文件
+- [x] Token 文件
+- [x] 图标导出规范
 - [ ] README / Banner 使用规范
-- [ ] SVG / PNG 输出包
+- [x] SVG / PNG 输出包
 - [ ] Figma 源文件整理
 
 ## 4. 三项目识别重点
@@ -73,27 +73,33 @@
 - [ ] `brand/scenes/github-header-weopen.png`
 
 ### 5.2 三项目
-- [ ] `brand/icons/wemail-icon.svg`
-- [ ] `brand/icons/wegit-icon.svg`
-- [ ] `brand/icons/weopen-icon.svg`
-- [ ] `brand/icons/wemail-badge.png`
-- [ ] `brand/icons/wegit-badge.png`
-- [ ] `brand/icons/weopen-badge.png`
+- [x] `brand/icons/wemail-icon.svg`
+- [x] `brand/icons/wemail-icon-minimal.svg`
+- [x] `brand/icons/wegit-icon.svg`
+- [x] `brand/icons/wegit-icon-minimal.svg`
+- [x] `brand/icons/weopen-icon.svg`
+- [x] `brand/icons/weopen-icon-minimal.svg`
+- [x] `brand/icons/wemail-badge.png`
+- [x] `brand/icons/wegit-badge.png`
+- [x] `brand/icons/weopen-badge.png`
 - [ ] `brand/banners/wemail-readme-header.png`
 - [ ] `brand/banners/wegit-readme-header.png`
 - [ ] `brand/banners/weopen-readme-header.png`
 
 ### 5.3 规范
-- [ ] `brand/tokens/color.tokens.json`
+- [x] `brand/tokens/color.tokens.json`
 - [ ] `brand/tokens/motion.tokens.json`
 - [ ] `brand/guidelines/redy-brand-guidelines.pdf`
+- [x] `brand/guidelines/redy-brand-guidelines.md`
+- [x] `brand/guidelines/redy-three-view-structure.md`
+- [x] `brand/guidelines/redy-t15-icon-system-review.md`
 - [ ] `brand/guidelines/redy-asset-checklist.md`
 
 ## 6. 协作分工
 
 ### 品牌 / 视觉主设计
-- [ ] 锁定母品牌基线
-- [ ] 审核三项目视觉映射
+- [x] 锁定母品牌基线
+- [x] 审核三项目视觉映射
 - [ ] 审核 GitHub Header 与官网 Hero 总方向
 
 ### 插画 / 吉祥物设计
@@ -103,9 +109,9 @@
 - [ ] 输出贴纸初版
 
 ### 图标 / 资产设计
-- [ ] 输出三项目主图标
-- [ ] 输出三项目极简图标
-- [ ] 输出三项目 Badge
+- [x] 输出三项目主图标
+- [x] 输出三项目极简图标
+- [x] 输出三项目 Badge
 - [ ] 输出三项目 README 头图
 
 ### 前端 / 数字场景落地
@@ -142,21 +148,21 @@
 - [x] 确认 Redy 主 Logo 最终版
 - [x] 确认 Redy 极简头像最终版
 - [x] 确认 Redy 标准立绘最终版
-- [ ] 确认主色板与三项目强调色规范
-- [ ] 确认 Redy 三视图与核心结构说明
-- [ ] 输出第一版母品牌规范页
+- [x] 确认主色板与三项目强调色规范
+- [x] 确认 Redy 三视图与核心结构说明
+- [x] 输出第一版母品牌规范页
 
 ### 阶段 2：三项目识别资产完成
-- [ ] 完成 WeMail 主图标
-- [ ] 完成 WeMail 极简图标
-- [ ] 完成 WeMail Badge
-- [ ] 完成 WeGit 主图标
-- [ ] 完成 WeGit 极简图标
-- [ ] 完成 WeGit Badge
-- [ ] 完成 WeOpen 主图标
-- [ ] 完成 WeOpen 极简图标
-- [ ] 完成 WeOpen Badge
-- [ ] 统一校对三项目图标系统的一致性
+- [x] 完成 WeMail 主图标
+- [x] 完成 WeMail 极简图标
+- [x] 完成 WeMail Badge
+- [x] 完成 WeGit 主图标
+- [x] 完成 WeGit 极简图标
+- [x] 完成 WeGit Badge
+- [x] 完成 WeOpen 主图标
+- [x] 完成 WeOpen 极简图标
+- [x] 完成 WeOpen Badge
+- [x] 统一校对三项目图标系统的一致性
 
 ### 阶段 3：GitHub / README 资产完成
 - [ ] 完成 GitHub Header 首版
@@ -176,7 +182,7 @@
 - [ ] 整理 SVG 导出包
 - [ ] 整理 PNG 导出包
 - [ ] 整理 Figma 源文件
-- [ ] 输出 color tokens
+- [x] 输出 color tokens
 - [ ] 输出 motion tokens
 - [ ] 输出最终品牌规范 PDF
 - [ ] 输出最终交付清单归档版本
@@ -191,15 +197,15 @@
 ## 10. 建议任务分发方式
 
 ### 给品牌 / 主视觉设计
-- [ ] 阶段 1 全部
+- [x] 阶段 1 全部
 - [ ] 阶段 3 中 GitHub Header 风格总审
 
 ### 给图标 / 品牌资产设计
-- [ ] 阶段 2 全部
+- [x] 阶段 2 全部
 - [ ] 阶段 3 中三项目 README 头图
 
 ### 给插画设计
-- [ ] Redy 标准立绘
+- [x] Redy 标准立绘
 - [ ] Redy 场景版
 - [ ] 404 困惑版
 - [ ] 贴纸初版
@@ -261,7 +267,7 @@
 **包含任务：**
 - [x] T01 锁定 Redy 主 Logo 最终版
 - [x] T02 锁定 Redy 极简头像最终版
-- [ ] T04 确认主色板与三项目强调色规范
+- [x] T04 确认主色板与三项目强调色规范
 
 **今天完成后的可见结果：**
 - 一套明确的母品牌主识别
@@ -282,9 +288,9 @@
 **建议负责人：** 图标 / 品牌资产设计
 
 **包含任务：**
-- [ ] T06 完成 WeMail 主图标
-- [ ] T09 完成 WeGit 主图标
-- [ ] T12 完成 WeOpen 主图标
+- [x] T06 完成 WeMail 主图标
+- [x] T09 完成 WeGit 主图标
+- [x] T12 完成 WeOpen 主图标
 
 **今天完成后的可见结果：**
 - 三项目将首次具备独立但统一的主识别资产
@@ -294,7 +300,7 @@
 **建议负责人：** 品牌 / 主视觉设计
 
 **包含任务：**
-- [ ] T05 输出母品牌规范页初版
+- [x] T05 输出母品牌规范页初版
 
 **依赖：**
 - 建议在 T02 / T03 / T04 有初稿后开始
@@ -304,14 +310,14 @@
 
 ## 13. 今日任务包推荐启动顺序
 
-1. [ ] 先启动任务包 A
-2. [ ] 同时启动任务包 B
-3. [ ] 在 A 基本稳定后立刻启动任务包 C
-4. [ ] 在 A/B 有初稿后启动任务包 D
+1. [x] 先启动任务包 A
+2. [x] 同时启动任务包 B
+3. [x] 在 A 基本稳定后立刻启动任务包 C
+4. [x] 在 A/B 有初稿后启动任务包 D
 
 ## 14. 今日结束时建议检查点
 
 - [x] Redy 主 Logo、极简头像、标准立绘均已有方向稿
-- [ ] 三项目主图标至少有第一轮草图
-- [ ] WeMail 蜡封元素已经进入图标或视觉草图
-- [ ] 品牌规范页已经开始沉淀，而不是只停留在总方案文档里
+- [x] 三项目主图标至少有第一轮草图
+- [x] WeMail 蜡封元素已经进入图标或视觉草图
+- [x] 品牌规范页已经开始沉淀，而不是只停留在总方案文档里

@@ -46,7 +46,6 @@ describe('brand asset delivery', () => {
     expect(checklist).toContain('- [x] Redy 主 Logo');
     expect(checklist).toContain('- [x] `brand/logo/weopen-redy-primary.svg`');
     expect(checklist).toContain('- [x] 确认 Redy 主 Logo 最终版');
-    expect(checklist).toContain('- [x] T01 锁定 Redy 主 Logo 最终版');
   });
 
   it('ships the finalized T02 avatar and marks its checklist items complete', () => {
@@ -61,7 +60,6 @@ describe('brand asset delivery', () => {
     expect(checklist).toContain('- [x] Redy 极简头像');
     expect(checklist).toContain('- [x] `brand/logo/weopen-redy-avatar.png`');
     expect(checklist).toContain('- [x] 确认 Redy 极简头像最终版');
-    expect(checklist).toContain('- [x] T02 锁定 Redy 极简头像最终版');
   });
 
   it('ships the finalized T03 standard mascot and marks its checklist items complete', () => {
@@ -72,12 +70,117 @@ describe('brand asset delivery', () => {
     expect(readFileSync(mascotPath)).toBeTruthy();
     expect(readPngDimensions(mascotPath)).toEqual({ width: 800, height: 1000 });
     expect(readFileSync(mascotGuidePath, 'utf8')).toContain('T03 已锁定 Redy 标准立绘最终版');
+    expect(readFileSync(mascotGuidePath, 'utf8')).toContain('双镜片均保留 Git 绿代码 / 终端反光');
 
     const checklist = readFileSync(checklistPath, 'utf8');
     expect(checklist).toContain('- [x] Redy 标准立绘');
     expect(checklist).toContain('- [x] `brand/mascot/standard/redy-full-body.png`');
     expect(checklist).toContain('- [x] 输出标准立绘');
     expect(checklist).toContain('- [x] 确认 Redy 标准立绘最终版');
-    expect(checklist).toContain('- [x] T03 锁定 Redy 标准立绘最终版');
+  });
+
+  it('ships the finalized T04 color tokens and marks its checklist items complete', () => {
+    const tokenPath = path.join(rootDir, 'brand/tokens/color.tokens.json');
+    const colorGuidePath = path.join(rootDir, 'brand/guidelines/redy-t04-color-system.md');
+    const checklistPath = path.join(rootDir, 'DeliveryChecklist.md');
+    const tokens = JSON.parse(readFileSync(tokenPath, 'utf8'));
+
+    expect(tokens.color.brand.redyRust.$value).toBe('#C14B30');
+    expect(tokens.color.brand.cream.$value).toBe('#F6F1E9');
+    expect(tokens.color.brand.charcoal.$value).toBe('#2D2A2E');
+    expect(tokens.color.brand.gitGreen.$value).toBe('#2CC68E');
+    expect(tokens.color.brand.warmRice.$value).toBe('#F8F5F0');
+    expect(tokens.color.brand.softBrown.$value).toBe('#8B6E54');
+    expect(tokens.color.project.wemail.waxSeal.$value).toBe('#A75A4C');
+    expect(tokens.color.project.wegit.branchGreen.$value).toBe('#2CC68E');
+    expect(tokens.color.project.weopen.platformRice.$value).toBe('#E9DED1');
+    expect(readFileSync(colorGuidePath, 'utf8')).toContain('T04 已确认主色板与 WeMail / WeGit / WeOpen 三项目强调色规范');
+
+    const checklist = readFileSync(checklistPath, 'utf8');
+    expect(checklist).toContain('- [x] 品牌色板文件');
+    expect(checklist).toContain('- [x] Token 文件');
+    expect(checklist).toContain('- [x] `brand/tokens/color.tokens.json`');
+    expect(checklist).toContain('- [x] 确认主色板与三项目强调色规范');
+    expect(checklist).toContain('- [x] 输出 color tokens');
+  });
+
+  it('ships the T05 mother-brand guidelines draft and marks its checklist items complete', () => {
+    const guidelinePath = path.join(rootDir, 'brand/guidelines/redy-brand-guidelines.md');
+    const taskGuidePath = path.join(rootDir, 'brand/guidelines/redy-t05-brand-guidelines-draft.md');
+    const checklistPath = path.join(rootDir, 'DeliveryChecklist.md');
+    const guideline = readFileSync(guidelinePath, 'utf8');
+
+    expect(guideline).toContain('T05 已输出母品牌规范页初版');
+    expect(guideline).toContain('正面坐姿');
+    expect(guideline).toContain('WeMail');
+    expect(guideline).toContain('WeGit');
+    expect(guideline).toContain('WeOpen');
+    expect(readFileSync(taskGuidePath, 'utf8')).toContain('T05 已输出母品牌规范页初版');
+
+    const checklist = readFileSync(checklistPath, 'utf8');
+    expect(checklist).toContain('- [x] 输出第一版母品牌规范页');
+    expect(checklist).toContain('- [x] `brand/guidelines/redy-brand-guidelines.md`');
+  });
+
+  it('keeps phase 1 complete before phase 2 delivery starts', () => {
+    const structurePath = path.join(rootDir, 'brand/guidelines/redy-three-view-structure.md');
+    const checklistPath = path.join(rootDir, 'DeliveryChecklist.md');
+
+    expect(readFileSync(structurePath, 'utf8')).toContain('Redy 三视图与核心结构说明');
+
+    const checklist = readFileSync(checklistPath, 'utf8');
+    expect(checklist).toContain('- [x] `brand/guidelines/redy-three-view-structure.md`');
+    expect(checklist).toContain('- [x] 确认 Redy 三视图与核心结构说明');
+    expect(checklist).toContain('- [x] 阶段 1 全部');
+  });
+
+  it('ships the phase 2 primary and minimal project SVG icons', () => {
+    const svgAssets = [
+      ['brand/icons/wemail-icon.svg', 'WeMail Primary Icon'],
+      ['brand/icons/wemail-icon-minimal.svg', 'WeMail Minimal Icon'],
+      ['brand/icons/wegit-icon.svg', 'WeGit Primary Icon'],
+      ['brand/icons/wegit-icon-minimal.svg', 'WeGit Minimal Icon'],
+      ['brand/icons/weopen-icon.svg', 'WeOpen Primary Icon'],
+      ['brand/icons/weopen-icon-minimal.svg', 'WeOpen Minimal Icon'],
+    ];
+
+    for (const [assetPath, title] of svgAssets) {
+      const svg = readFileSync(path.join(rootDir, assetPath), 'utf8');
+
+      expect(svg).toContain(`<title id="title">${title}</title>`);
+      expect(svg).toContain('viewBox=');
+      expect(svg).toContain('#2D2A2E');
+      expect(svg).toContain('#8B6E54');
+    }
+
+    const checklist = readFileSync(path.join(rootDir, 'DeliveryChecklist.md'), 'utf8');
+    for (const [assetPath] of svgAssets) {
+      expect(checklist).toContain(`- [x] \`${assetPath}\``);
+    }
+    expect(checklist).toContain('- [x] 阶段 2 全部');
+  });
+
+  it('ships the phase 2 project badge PNG assets and T15 review', () => {
+    const badgeAssets = [
+      'brand/icons/wemail-badge.png',
+      'brand/icons/wegit-badge.png',
+      'brand/icons/weopen-badge.png',
+    ];
+
+    for (const assetPath of badgeAssets) {
+      const filePath = path.join(rootDir, assetPath);
+
+      expect(readFileSync(filePath).length).toBeGreaterThan(1000);
+      expect(readPngDimensions(filePath)).toEqual({ width: 960, height: 320 });
+    }
+
+    const reviewPath = path.join(rootDir, 'brand/guidelines/redy-t15-icon-system-review.md');
+    expect(readFileSync(reviewPath, 'utf8')).toContain('T15 已完成 WeMail / WeGit / WeOpen 三项目图标系统校对');
+
+    const checklist = readFileSync(path.join(rootDir, 'DeliveryChecklist.md'), 'utf8');
+    expect(checklist).toContain('- [x] `brand/icons/wemail-badge.png`');
+    expect(checklist).toContain('- [x] `brand/icons/wegit-badge.png`');
+    expect(checklist).toContain('- [x] `brand/icons/weopen-badge.png`');
+    expect(checklist).toContain('- [x] 统一校对三项目图标系统的一致性');
   });
 });

@@ -1,0 +1,96 @@
+{
+  "$schema": "https://tokens.studio/schemas/tokens.json",
+  "meta": {
+    "name": "WeOpen Redy Color Tokens",
+    "version": "0.1.0",
+    "task": "T04",
+    "description": "Core Redy brand palette plus lightweight project accent colors for WeMail, WeGit, and WeOpen."
+  },
+  "color": {
+    "brand": {
+      "redyRust": {
+        "$type": "color",
+        "$value": "#C14B30",
+        "$description": "Redy primary rust-red fur and main brand emphasis."
+      },
+      "cream": {
+        "$type": "color",
+        "$value": "#F6F1E9",
+        "$description": "Cream fur, inner ear, face mask, and soft neutral surfaces."
+      },
+      "charcoal": {
+        "$type": "color",
+        "$value": "#2D2A2E",
+        "$description": "Dark straps, text, structural details, and high-contrast foregrounds."
+      },
+      "gitGreen": {
+        "$type": "color",
+        "$value": "#2CC68E",
+        "$description": "Small Git, terminal, lens reflection, and interaction accents only."
+      },
+      "warmRice": {
+        "$type": "color",
+        "$value": "#F8F5F0",
+        "$description": "Warm page background and neutral display surface."
+      },
+      "softBrown": {
+        "$type": "color",
+        "$value": "#8B6E54",
+        "$description": "Soft outline, leather, ring, and gentle structural strokes."
+      }
+    },
+    "project": {
+      "wemail": {
+        "cloudMist": {
+          "$type": "color",
+          "$value": "#DDE8EC",
+          "$description": "Cloud-mist blue gray for mail, inbox, and private delivery cues."
+        },
+        "coolLight": {
+          "$type": "color",
+          "$value": "#F0FAFC",
+          "$description": "Cool white-blue highlight for mail cards and envelope surfaces."
+        },
+        "waxSeal": {
+          "$type": "color",
+          "$value": "#A75A4C",
+          "$description": "Restrained wax-seal red-brown detail for trust and delivery marks."
+        }
+      },
+      "wegit": {
+        "branchGreen": {
+          "$type": "color",
+          "$value": "#2CC68E",
+          "$description": "Primary WeGit accent, reused from Redy's Git green."
+        },
+        "graphTint": {
+          "$type": "color",
+          "$value": "#DDF7EE",
+          "$description": "Soft branch graph fill and quiet commit-node surface."
+        },
+        "graphDark": {
+          "$type": "color",
+          "$value": "#2F4F46",
+          "$description": "Deep green-gray for branch structure and technical contrast."
+        }
+      },
+      "weopen": {
+        "platformRice": {
+          "$type": "color",
+          "$value": "#E9DED1",
+          "$description": "Warm platform neutral for dashboard, module, and organization surfaces."
+        },
+        "panelBrown": {
+          "$type": "color",
+          "$value": "#B58A68",
+          "$description": "Muted panel brown for platform frames and modular cards."
+        },
+        "rustExtension": {
+          "$type": "color",
+          "$value": "#C14B30",
+          "$description": "Small Redy-rust extension for mother-brand continuity."
+        }
+      }
+    }
+  }
+}
