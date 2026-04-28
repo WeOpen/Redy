@@ -70,21 +70,21 @@
 - [x] `brand/logo/weopen-redy-avatar.png`
 - [x] `brand/mascot/standard/redy-full-body.png`
 - [ ] `brand/mascot/chibi/redy-chibi.png`
-- [ ] `brand/scenes/github-header-weopen.png`
+- [x] `brand/scenes/github-header-weopen.png`
 
 ### 5.2 三项目
-- [x] `brand/icons/wemail-icon.svg`
-- [x] `brand/icons/wemail-icon-minimal.svg`
-- [x] `brand/icons/wegit-icon.svg`
-- [x] `brand/icons/wegit-icon-minimal.svg`
-- [x] `brand/icons/weopen-icon.svg`
-- [x] `brand/icons/weopen-icon-minimal.svg`
+- [x] `brand/icons/wemail-icon.png`
+- [x] `brand/icons/wemail-icon-minimal.png`
+- [x] `brand/icons/wegit-icon.png`
+- [x] `brand/icons/wegit-icon-minimal.png`
+- [x] `brand/icons/weopen-icon.png`
+- [x] `brand/icons/weopen-icon-minimal.png`
 - [x] `brand/icons/wemail-badge.png`
 - [x] `brand/icons/wegit-badge.png`
 - [x] `brand/icons/weopen-badge.png`
-- [ ] `brand/banners/wemail-readme-header.png`
-- [ ] `brand/banners/wegit-readme-header.png`
-- [ ] `brand/banners/weopen-readme-header.png`
+- [x] `brand/banners/wemail-readme-header.png`
+- [x] `brand/banners/wegit-readme-header.png`
+- [x] `brand/banners/weopen-readme-header.png`
 
 ### 5.3 规范
 - [x] `brand/tokens/color.tokens.json`
@@ -165,11 +165,11 @@
 - [x] 统一校对三项目图标系统的一致性
 
 ### 阶段 3：GitHub / README 资产完成
-- [ ] 完成 GitHub Header 首版
-- [ ] 完成 WeMail README 头图
-- [ ] 完成 WeGit README 头图
-- [ ] 完成 WeOpen README 头图
-- [ ] 校对三项目头图在同一组织下的统一性
+- [x] 完成 GitHub Header 首版
+- [x] 完成 WeMail README 头图
+- [x] 完成 WeGit README 头图
+- [x] 完成 WeOpen README 头图
+- [x] 校对三项目头图在同一组织下的统一性
 
 ### 阶段 4：数字场景接入
 - [ ] 接入官网 Hero 视觉
