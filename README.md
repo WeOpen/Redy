@@ -1,4 +1,6 @@
-# Redy 🦝✨
+![Redy GitHub Header](./brand/scenes/github-header-weopen.png)
+
+# Redy
 
 > WeOpen 的温暖开源守护者，也是这个品牌展示站点的主角。
 
@@ -16,6 +18,16 @@
 - 基础测试
 - 自动部署工作流
 
+## 视觉资源
+
+阶段 4 已把官网 Hero、404、CLI 与 README / GitHub 展示资源接入到仓库中。三项目 README 头图如下：
+
+![WeMail README Header](./brand/banners/wemail-readme-header.png)
+
+![WeGit README Header](./brand/banners/wegit-readme-header.png)
+
+![WeOpen README Header](./brand/banners/weopen-readme-header.png)
+
 ## 🗂️ 目录结构
 
 ```text
@@ -30,6 +42,12 @@ DraftDesign.md  原始品牌设计草案
 ```bash
 npm install
 npm run dev
+```
+
+## CLI 欢迎输出
+
+```bash
+npm run welcome
 ```
 
 ## 🧪 运行测试

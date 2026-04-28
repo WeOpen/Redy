@@ -5,7 +5,7 @@ import './globals.css';
 
 export const metadata: Metadata = {
   title: 'Redy | Open source, warm and ready.',
-  description: 'Redy 是 WeOpen 的开源守护者，一套兼具温度、秩序与技术感的品牌角色系统。',
+  description: 'Redy 是 WeOpen 的开源生态维护者、代码园丁与分支探险家，用于统一官网、GitHub、README、CLI 与社区传播中的品牌表达。',
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {

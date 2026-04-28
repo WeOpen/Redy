@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="title desc">
+  <title id="title">WeMail Primary Icon</title>
+  <desc id="desc">Envelope and wax seal icon in the Redy brand system.</desc>
+  <rect width="256" height="256" rx="56" fill="#F8F5F0"/>
+  <rect x="36" y="58" width="184" height="140" rx="26" fill="#F6F1E9" stroke="#8B6E54" stroke-width="10"/>
+  <path d="M44 78l84 64 84-64" fill="none" stroke="#2D2A2E" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M48 180l57-50M208 180l-57-50" fill="none" stroke="#8B6E54" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="128" cy="142" r="28" fill="#C14B30"/>
+  <path d="M116 141l8 8 18-20" fill="none" stroke="#F6F1E9" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M182 62c10 8 16 18 18 31" fill="none" stroke="#C9D9E8" stroke-width="8" stroke-linecap="round"/>
+</svg>

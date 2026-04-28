@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title desc">
+  <title id="title">WeOpen Minimal Icon</title>
+  <desc id="desc">Minimal platform module dashboard.</desc>
+  <rect x="16" y="22" width="96" height="84" rx="20" fill="#F6F1E9" stroke="#8B6E54" stroke-width="7"/>
+  <path d="M32 45h64" stroke="#2D2A2E" stroke-width="7" stroke-linecap="round"/>
+  <rect x="31" y="59" width="25" height="21" rx="7" fill="#E9DED1" stroke="#2D2A2E" stroke-width="5"/>
+  <rect x="72" y="59" width="25" height="21" rx="7" fill="#F8F5F0" stroke="#2D2A2E" stroke-width="5"/>
+  <path d="M34 93h60" stroke="#C14B30" stroke-width="7" stroke-linecap="round"/>
+  <circle cx="37" cy="34" r="4" fill="#C14B30"/>
+  <circle cx="51" cy="34" r="4" fill="#2CC68E"/>
+</svg>

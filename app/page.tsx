@@ -1,9 +1,15 @@
 import React from 'react';
 import standardMascot from '../brand/mascot/standard/redy-full-body.png';
-import gardenerMascot from '../brand/tmp/redy-shape-c-gardener-sheet.png';
 import chibiMascot from '../brand/tmp/redy-shape-d-chibi-sheet.png';
-import logoLockup from '../brand/logo/redy-logo-lockup.png';
+import logoLockup from '../brand/logo/redy-logo-lockup-transparent.png';
 import iconPrimary from '../brand/icons/redy-icon-primary.png';
+import wegitIcon from '../brand/icons/wegit-icon-minimal.png';
+import wemailIcon from '../brand/icons/wemail-icon-minimal.png';
+import weopenIcon from '../brand/icons/weopen-icon-minimal.png';
+import githubHeader from '../brand/scenes/github-header-weopen.png';
+import wemailReadmeHeader from '../brand/banners/wemail-readme-header.png';
+import wegitReadmeHeader from '../brand/banners/wegit-readme-header.png';
+import weopenReadmeHeader from '../brand/banners/weopen-readme-header.png';
 import TopbarNav from './topbar-nav';
 
 const navigation = [
@@ -13,27 +19,45 @@ const navigation = [
   { label: '品牌文案', href: '#voice' },
 ] satisfies Array<{ label: string; href: `#${string}` }>;
 
+const projectLinks = [
+  {
+    name: 'WeMail',
+    href: 'https://github.com/WeOpen/WeMail',
+    icon: wemailIcon.src,
+  },
+  {
+    name: 'WeGit',
+    href: 'https://github.com/WeOpen/WeGit',
+    icon: wegitIcon.src,
+  },
+  {
+    name: 'WeOpen',
+    href: 'https://github.com/WeOpen/WeOpen',
+    icon: weopenIcon.src,
+  },
+] satisfies Array<{ name: string; href: string; icon: string }>;
+
 const traits = ['冷静', '极客', '温和', '可靠', '专注', '审慎', '观察者', '维护者', '共建者'];
 
 const valuePairs = [
-  ['Warm, not noisy', '以安静、陪伴感的方式表达品牌温度。'],
-  ['Technical, not cold', '保留 Git 与开源语义，但不走冰冷的工具感。'],
-  ['Reliable, not rigid', '强调准备就绪、可靠协作，而不是僵硬流程。'],
-  ['Curious, not chaotic', '像代码园丁一样观察、筛选、培育更好的开源体验。'],
+  ['Warm, not noisy', '让技术品牌保留温度，但不走夸张、喧闹的表达路线。'],
+  ['Technical, not cold', '保留 Git、分支、提交、模块入口等技术语义，同时避免工具感过重。'],
+  ['Reliable, not rigid', '传达准备就绪、可靠协作的气质，让品牌看起来稳，但不僵硬。'],
+  ['Curious, not chaotic', '像代码园丁一样观察、筛选、整理，让开源生态更有秩序地生长。'],
 ];
 
 const visualItems = [
   {
     title: '识别形态',
-    body: '由 Logo / Icon、标准立绘、园丁场景与 Q 版形态组成，覆盖 favicon 到主视觉的完整层级。',
+    body: '由 Logo / Icon、标准立绘、园丁场景与轻量化形态组成，覆盖 favicon、仓库头像、README 头图和官网主视觉。',
   },
   {
     title: '标志性特征',
-    body: '护目镜、工具腰带与蓬松尾巴构成 Redy 的三大识别锚点。',
+    body: '护目镜、工具腰带与蓬松尾巴构成 Redy 的三大识别锚点，让角色在不同尺寸和场景中仍然可辨认。',
   },
   {
     title: '图形语言',
-    body: 'Git 分支线、三项目识别系统与像素笔刷尾巴，让角色系统能够延展到页面和运营物料。',
+    body: 'Git 分支线、项目节点、模块卡片与像素笔刷尾巴共同组成辅助语言，支持官网、README、CLI 和运营物料延展。',
   },
 ];
 
@@ -49,23 +73,44 @@ const palette = [
 const useCases = [
   {
     title: '官网 Hero',
-    body: '用园丁场景建立第一印象，把 Redy 与 WeMail、WeGit、WeOpen 三项目生态放在同一张视觉中。',
+    body: '用开源森林与园丁概念建立第一印象，让 Redy 和 WeMail、WeGit、WeOpen 三个项目自然出现在同一个生态场景中。',
   },
   {
     title: 'GitHub Header',
-    body: '左侧角色、中部 Git 分支与项目节点、右侧品牌字锁，适合组织主页和仓库形象统一。',
+    body: '通过 Redy 主视觉、Git 分支结构、项目节点与品牌字标，统一组织主页和仓库首页的第一视觉印象。',
   },
   {
     title: 'README / Badge',
-    body: '让 WeMail、WeGit、WeOpen 在同一母品牌下拥有可区分的图标、Badge 与头图资产。',
+    body: '让 WeMail、WeGit、WeOpen 拥有同一母品牌下的头图、图标与 Badge，同时保留各自的产品识别重点。',
   },
   {
     title: 'CLI 欢迎界面',
-    body: '让初始化、扫描分支、准备就绪这些动作拥有更有仪式感的开场。',
+    body: '把初始化、扫描分支、cherry-pick 与 ready 状态转化为简洁的开场语，让命令行也有 Redy 的极客仪式感。',
   },
   {
     title: '404 / 异常页',
-    body: '用 Q 版 Redy 的观察姿态表达“路径尚未被合并”的轻量反馈。',
+    body: '使用轻量化 Redy 表达“暂时没有找到路径”的状态，在保持清晰反馈的同时延续品牌温度。',
+  },
+];
+
+const readmeAssets = [
+  {
+    name: 'WeMail',
+    alt: 'WeMail README 头图',
+    src: wemailReadmeHeader.src,
+    body: '信封、蜡封、云轮廓和临时邮件卡片共同表达可信、私密、被正式递送的通信气质。',
+  },
+  {
+    name: 'WeGit',
+    alt: 'WeGit README 头图',
+    src: wegitReadmeHeader.src,
+    body: 'branch graph、commit node 与原生窗口轮廓承接版本演化、协作流程和桌面工具方向。',
+  },
+  {
+    name: 'WeOpen',
+    alt: 'WeOpen README 头图',
+    src: weopenReadmeHeader.src,
+    body: '模块卡片、控制台面板和统一入口框架强化平台感，呈现 WeOpen 作为生态主入口的角色。',
   },
 ];
 
@@ -111,20 +156,20 @@ export default function HomePage() {
           <p className="eyebrow">Open source, warm and ready.</p>
           <h1>Redy, the warm guardian of open source.</h1>
           <p className="lead">
-            Redy 是 WeOpen 的品牌吉祥物与角色系统。它把温暖的陪伴感、开源协作的秩序感，以及开发者世界里的技术审美连接成一个可长期演进的品牌入口。
+            Redy 是 WeOpen 的开源生态维护者、代码园丁与分支探险家。它把温暖亲和的角色气质、Git 与开源文化的技术隐喻，以及 WeMail、WeGit、WeOpen 的项目识别连接成一套可长期使用的品牌视觉系统。
           </p>
           <div className="hero__actions">
             <a className="button button--primary" href="#story">
-              <span className="button__label">浏览品牌</span>
+              <span className="button__label">了解 Redy</span>
               <span className="button__shine" aria-hidden="true" />
             </a>
             <a className="button button--secondary" href="#visual-system">
-              <span className="button__label">查看资产</span>
+              <span className="button__label">查看视觉系统</span>
               <span className="button__shine" aria-hidden="true" />
             </a>
           </div>
           <div className="hero__notes">
-            <span className="hero-note">开源守护者</span>
+            <span className="hero-note">开源生态维护者</span>
             <span className="hero-note">代码园丁</span>
             <span className="hero-note">分支探险家</span>
           </div>
@@ -132,13 +177,28 @@ export default function HomePage() {
 
         <div className="hero__visual card-surface reveal-card reveal-card--visual">
           <div className="hero__lens-glow" aria-hidden="true" />
-          <img alt="Redy 园丁场景" className="hero__image" src={gardenerMascot.src} />
-          <div className="hero__visual-note">
+          <div className="hero__logo-panel">
             <img alt="Redy Logo Lockup" src={logoLockup.src} />
-            <p>
-              一只在开源森林里持续观察分支、连接 WeMail、WeGit、WeOpen 三项目生态并维护协作温度的红熊猫。
-            </p>
           </div>
+          <div className="hero__asset-strip" aria-label="WeOpen 子项目入口">
+            {projectLinks.map((project) => (
+              <a
+                key={project.name}
+                className="hero__asset-card"
+                href={project.href}
+                target="_blank"
+                rel="noreferrer"
+                aria-label={`打开 ${project.name} 项目`}
+              >
+                <img alt="" src={project.icon} aria-hidden="true" />
+                <strong>{project.name}</strong>
+              </a>
+            ))}
+          </div>
+          <img alt="Redy GitHub Header 主视觉" className="hero__image" src={githubHeader.src} />
+          <p className="hero__visual-note">
+            Redy 在开源森林中观察分支、整理贡献，并把 WeMail、WeGit、WeOpen 三个项目节点连接到同一套 WeOpen 母品牌视觉里。
+          </p>
         </div>
       </section>
 
@@ -150,29 +210,29 @@ export default function HomePage() {
         <div className="section-heading">
           <span className="section-heading__rule" aria-hidden="true" />
           <p className="eyebrow">品牌故事</p>
-          <h2>Redy 不只是 mascot，而是 WeOpen 的品牌人格化代表。</h2>
+          <h2>Redy 不只是一个角色形象，而是 WeOpen 的品牌人格化代表。</h2>
         </div>
         <div className="story-layout">
           <div className="card-surface prose-card reveal-card">
             <p>
-              README 将 Redy 定义为 WeOpen 开源生态维护者 / 代码园丁 / 分支探险家。它来自 Red 与 Ready，代表准备就绪、可靠、可协作的品牌气质。
+              Redy 的命名来自 Red 与 Ready，既对应红熊猫的核心色彩，也传达“准备就绪、可靠、可协作”的品牌气质。它不是孤立的装饰图案，而是 WeOpen 在官网、GitHub、README、CLI 与社区传播中的共同角色入口。
             </p>
             <p>
-              在最新方案里，Redy 不再使用水果隐喻来映射项目，而是直接连接 WeMail、WeGit、WeOpen 三个核心项目，让品牌叙事和实际产品生态保持一致。
+              在叙事上，Redy 穿梭于代码森林，观察每一条分支、每一次提交与每一份贡献。它不再借助额外隐喻来解释项目，而是直接连接 WeMail、WeGit、WeOpen 三个核心产品，让品牌故事和实际产品生态保持一致。
             </p>
           </div>
           <div className="story-tags">
             <div className="note-card reveal-card">
               <strong>WeOpen 开源生态维护者</strong>
-              <p>用观察、整理与维护建立长期品牌信任。</p>
+              <p>用观察、整理与维护建立长期品牌信任，让开源协作显得更可靠、更有温度。</p>
             </div>
             <div className="note-card reveal-card">
               <strong>代码园丁</strong>
-              <p>把协作想象成共同生长的森林，而不是机械流程。</p>
+              <p>把开源协作想象成持续生长的生态，而不是冷冰冰的流程堆叠。</p>
             </div>
             <div className="note-card reveal-card">
               <strong>分支探险家</strong>
-              <p>将 Git 分支、项目节点与协作演化变成 Redy 的叙事语言。</p>
+              <p>将 Git 分支、提交节点与版本演化变成可被看见、可被记住的视觉语言。</p>
             </div>
           </div>
         </div>
@@ -186,7 +246,7 @@ export default function HomePage() {
         <div className="section-heading">
           <span className="section-heading__rule" aria-hidden="true" />
           <p className="eyebrow">品牌人格</p>
-          <h2>温和，但不幼态；专业，但不冰冷。</h2>
+          <h2>温和，但不幼态；专业，但不疏离。</h2>
         </div>
         <div className="traits-layout">
           <div className="trait-cloud card-surface reveal-card">
@@ -215,7 +275,7 @@ export default function HomePage() {
         <div className="section-heading">
           <span className="section-heading__rule" aria-hidden="true" />
           <p className="eyebrow">视觉系统</p>
-          <h2>从角色本体到图形语言，Redy 是一套可执行的品牌系统。</h2>
+          <h2>从角色本体到图形语言，Redy 是一套可以被持续使用的品牌系统。</h2>
         </div>
         <div className="visual-layout">
           <div className="visual-gallery">
@@ -226,8 +286,8 @@ export default function HomePage() {
             </figure>
             <figure className="card-surface image-card reveal-card">
               <span className="image-card__halo" aria-hidden="true" />
-              <img alt="Redy Q 版形态" src={chibiMascot.src} />
-              <figcaption>Q 版形态</figcaption>
+              <img alt="Redy 轻量化形态" src={chibiMascot.src} />
+              <figcaption>轻量化形态</figcaption>
             </figure>
           </div>
           <div className="visual-copy">
@@ -260,7 +320,7 @@ export default function HomePage() {
         <div className="section-heading">
           <span className="section-heading__rule" aria-hidden="true" />
           <p className="eyebrow">应用场景</p>
-          <h2>官网、GitHub、CLI 与社区运营，都可以沿着同一套语义展开。</h2>
+          <h2>官网、GitHub、README、CLI 与社区传播，都可以沿着同一套语义展开。</h2>
         </div>
         <div className="use-case-grid">
           {useCases.map((item) => (
@@ -268,6 +328,17 @@ export default function HomePage() {
               <h3>{item.title}</h3>
               <p>{item.body}</p>
             </article>
+          ))}
+        </div>
+        <div className="readme-assets" aria-label="README 视觉资源">
+          {readmeAssets.map((asset) => (
+            <figure key={asset.name} className="readme-asset card-surface reveal-card">
+              <img alt={asset.alt} src={asset.src} />
+              <figcaption>
+                <strong>{asset.name}</strong>
+                <span>{asset.body}</span>
+              </figcaption>
+            </figure>
           ))}
         </div>
       </section>
@@ -280,12 +351,12 @@ export default function HomePage() {
         <div className="section-heading">
           <span className="section-heading__rule" aria-hidden="true" />
           <p className="eyebrow">品牌文案</p>
-          <h2>一句话能被记住，一组短句能被持续复用。</h2>
+          <h2>一句话建立记忆点，一组短句支撑长期复用。</h2>
         </div>
         <div className="voice-layout">
           <div className="card-surface quote-card reveal-card">
             <p>
-              Redy 是 WeOpen 的开源守护者，一只温润又极客的红熊猫。它观察每一条分支、每一次提交与每一份贡献，持续挑选最值得被保留与生长的部分。
+              Redy 是 WeOpen 的开源守护者，一只温润又极客的红熊猫。它细心观察分支、提交与贡献，持续 cherry-pick 最值得被保留与生长的部分，让开源协作更温暖、更可靠，也更 Ready。
             </p>
           </div>
           <ul className="voice-list card-surface reveal-card">
@@ -300,7 +371,7 @@ export default function HomePage() {
         <div className="footer__glow" aria-hidden="true" />
         <p className="footer__title">温和看待技术，严谨对待代码。</p>
         <p>
-          让开源不只是协作，更是一片持续生长的森林。
+          让开源不只是协作，更是一片被精心维护、持续生长的森林。
         </p>
       </footer>
 

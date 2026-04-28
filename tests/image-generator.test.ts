@@ -9,6 +9,7 @@ import {
   parseEnvFile,
   toEnvReadErrorMessage,
 } from '@/scripts/image-generator';
+import { REDY_WELCOME_LINES, renderRedyWelcome } from '@/scripts/redy-welcome';
 
 describe('image generator helpers', () => {
   it('parses IMAGE_API_BASE_URL and IMAGE_API_KEY from env text', () => {
@@ -104,5 +105,14 @@ describe('image generator helpers', () => {
     expect(
       () => normalizeGenerationPayload({ prompt: 'red panda', debug_account_tier: 'team' }),
     ).toThrow('debug_account_tier must be free or plus.');
+  });
+
+  it('renders the phase 4 CLI welcome output with Redy status lines', () => {
+    const output = renderRedyWelcome();
+
+    expect(REDY_WELCOME_LINES).toContain('[WeOpen] Initializing environment...');
+    expect(output).toContain('Redy is online.');
+    expect(output).toContain('[Redy] Scanning branches...');
+    expect(output).toContain("[Redy] Ready. Let's build something open.");
   });
 });

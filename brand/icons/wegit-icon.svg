@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="title desc">
+  <title id="title">WeGit Primary Icon</title>
+  <desc id="desc">Branch graph and commit nodes in the Redy brand system.</desc>
+  <rect width="256" height="256" rx="56" fill="#F8F5F0"/>
+  <rect x="34" y="42" width="188" height="172" rx="28" fill="#F6F1E9" stroke="#8B6E54" stroke-width="10"/>
+  <path d="M72 78v92c0 18 15 32 33 32h78" fill="none" stroke="#2D2A2E" stroke-width="10" stroke-linecap="round"/>
+  <path d="M72 126h54c19 0 34-15 34-34V78" fill="none" stroke="#2CC68E" stroke-width="10" stroke-linecap="round"/>
+  <circle cx="72" cy="78" r="16" fill="#2CC68E" stroke="#2D2A2E" stroke-width="6"/>
+  <circle cx="160" cy="78" r="16" fill="#F6F1E9" stroke="#2D2A2E" stroke-width="6"/>
+  <circle cx="72" cy="170" r="16" fill="#F6F1E9" stroke="#2D2A2E" stroke-width="6"/>
+  <circle cx="183" cy="202" r="16" fill="#2CC68E" stroke="#2D2A2E" stroke-width="6"/>
+  <path d="M54 54h148" stroke="#8B6E54" stroke-width="6" stroke-linecap="round" opacity=".65"/>
+</svg>

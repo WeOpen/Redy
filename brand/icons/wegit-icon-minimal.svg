@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title desc">
+  <title id="title">WeGit Minimal Icon</title>
+  <desc id="desc">Minimal branch graph with commit nodes.</desc>
+  <path d="M34 22v54c0 16 13 29 29 29h31" fill="none" stroke="#2D2A2E" stroke-width="8" stroke-linecap="round"/>
+  <path d="M34 56h28c16 0 29-13 29-29" fill="none" stroke="#2CC68E" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="34" cy="22" r="12" fill="#2CC68E" stroke="#8B6E54" stroke-width="5"/>
+  <circle cx="91" cy="27" r="12" fill="#F6F1E9" stroke="#2D2A2E" stroke-width="5"/>
+  <circle cx="34" cy="76" r="12" fill="#F6F1E9" stroke="#2D2A2E" stroke-width="5"/>
+  <circle cx="94" cy="105" r="12" fill="#2CC68E" stroke="#8B6E54" stroke-width="5"/>
+</svg>

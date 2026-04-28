@@ -21,22 +21,22 @@
 - [x] Redy 极简头像
 - [x] Redy 标准立绘
 - [ ] Redy Q 版迷你版
-- [ ] GitHub Header 首版
-- [ ] 官网 Hero 主视觉首版
+- [x] GitHub Header 首版
+- [x] 官网 Hero 主视觉首版
 
 ### 3.2 三项目基础识别资产
 - [x] WeMail 主图标
 - [x] WeMail 极简图标（信封 / 蜡封抽象版）
 - [x] WeMail Badge
-- [ ] WeMail README 头图
+- [x] WeMail README 头图
 - [x] WeGit 主图标
 - [x] WeGit 极简图标（分支线 / 提交节点抽象版）
 - [x] WeGit Badge
-- [ ] WeGit README 头图
+- [x] WeGit README 头图
 - [x] WeOpen 主图标
 - [x] WeOpen 极简图标（模块卡片 / 控制台抽象版）
 - [x] WeOpen Badge
-- [ ] WeOpen README 头图
+- [x] WeOpen README 头图
 
 ### 3.3 规范与对接资产
 - [x] 品牌色板文件
@@ -74,11 +74,17 @@
 
 ### 5.2 三项目
 - [x] `brand/icons/wemail-icon.png`
+- [x] `brand/icons/wemail-icon.svg`
 - [x] `brand/icons/wemail-icon-minimal.png`
+- [x] `brand/icons/wemail-icon-minimal.svg`
 - [x] `brand/icons/wegit-icon.png`
+- [x] `brand/icons/wegit-icon.svg`
 - [x] `brand/icons/wegit-icon-minimal.png`
+- [x] `brand/icons/wegit-icon-minimal.svg`
 - [x] `brand/icons/weopen-icon.png`
+- [x] `brand/icons/weopen-icon.svg`
 - [x] `brand/icons/weopen-icon-minimal.png`
+- [x] `brand/icons/weopen-icon-minimal.svg`
 - [x] `brand/icons/wemail-badge.png`
 - [x] `brand/icons/wegit-badge.png`
 - [x] `brand/icons/weopen-badge.png`
@@ -115,10 +121,10 @@
 - [ ] 输出三项目 README 头图
 
 ### 前端 / 数字场景落地
-- [ ] 接入官网 Hero
-- [ ] 接入 404 页面
-- [ ] 接入 CLI 欢迎输出
-- [ ] 替换 GitHub / README 展示资源
+- [x] 接入官网 Hero
+- [x] 接入 404 页面
+- [x] 接入 CLI 欢迎输出
+- [x] 替换 GitHub / README 展示资源
 
 ### 动效 / 传播设计
 - [ ] Loading 动效
@@ -131,13 +137,13 @@
 1. [ ] 先锁定母品牌基线
 2. [ ] 再完成三项目图标与 Badge
 3. [ ] 再完成 README 头图与 GitHub Header
-4. [ ] 然后接入官网 Hero、404、CLI 等数字场景
+4. [x] 然后接入官网 Hero、404、CLI 等数字场景
 5. [ ] 最后扩展贴纸、动效、海报与周边
 
 ## 8. 验收标准
 
 - [ ] 三项目能一眼区分，但仍明显属于 WeOpen 同一品牌系统
-- [ ] GitHub、官网、README 已有一套可直接上线的完整视觉资产
+- [x] GitHub、官网、README 已有一套可直接上线的完整视觉资产
 - [ ] SVG、PNG、Figma 源文件与 Token 文件齐备
 - [ ] 视觉规范、导出文件与实际使用场景保持一致
 - [ ] WeMail 蜡封元素已进入图标或场景体系，而非仅停留在文案层
@@ -172,11 +178,11 @@
 - [x] 校对三项目头图在同一组织下的统一性
 
 ### 阶段 4：数字场景接入
-- [ ] 接入官网 Hero 视觉
-- [ ] 接入 404 页面视觉
-- [ ] 接入 CLI 欢迎输出
-- [ ] 替换 GitHub 仓库展示资源
-- [ ] 替换 README 视觉资源
+- [x] 接入官网 Hero 视觉
+- [x] 接入 404 页面视觉
+- [x] 接入 CLI 欢迎输出
+- [x] 替换 GitHub 仓库展示资源
+- [x] 替换 README 视觉资源
 
 ### 阶段 5：规范与源文件整理
 - [ ] 整理 SVG 导出包
@@ -211,8 +217,8 @@
 - [ ] 贴纸初版
 
 ### 给前端
-- [ ] 阶段 4 全部
-- [ ] 配合验收资源接入效果
+- [x] 阶段 4 全部
+- [x] 配合验收资源接入效果
 
 ### 给动效 / 传播设计
 - [ ] 阶段 6 中动效与传播物料

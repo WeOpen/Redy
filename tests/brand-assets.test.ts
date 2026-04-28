@@ -13,6 +13,10 @@ function readPngDimensions(filePath: string) {
   };
 }
 
+function readPngColorType(filePath: string) {
+  return readFileSync(filePath).readUInt8(25);
+}
+
 describe('brand asset delivery', () => {
   it('ships the finalized T01 primary logo as a semantic SVG', () => {
     const logoPath = path.join(rootDir, 'brand/logo/weopen-redy-primary.svg');
@@ -182,5 +186,36 @@ describe('brand asset delivery', () => {
     expect(checklist).toContain('- [x] `brand/icons/wegit-badge.png`');
     expect(checklist).toContain('- [x] `brand/icons/weopen-badge.png`');
     expect(checklist).toContain('- [x] 统一校对三项目图标系统的一致性');
+  });
+
+  it('connects phase 4 GitHub, README, and CLI display resources', () => {
+    const readme = readFileSync(path.join(rootDir, 'README.md'), 'utf8');
+    const checklist = readFileSync(path.join(rootDir, 'DeliveryChecklist.md'), 'utf8');
+    const packageJson = JSON.parse(readFileSync(path.join(rootDir, 'package.json'), 'utf8'));
+
+    expect(readme).toContain('![Redy GitHub Header](./brand/scenes/github-header-weopen.png)');
+    expect(readme).toContain('![WeMail README Header](./brand/banners/wemail-readme-header.png)');
+    expect(readme).toContain('![WeGit README Header](./brand/banners/wegit-readme-header.png)');
+    expect(readme).toContain('![WeOpen README Header](./brand/banners/weopen-readme-header.png)');
+    expect(packageJson.scripts.welcome).toBe('tsx scripts/redy-welcome.ts');
+
+    for (const item of [
+      '接入官网 Hero 视觉',
+      '接入 404 页面视觉',
+      '接入 CLI 欢迎输出',
+      '替换 GitHub 仓库展示资源',
+      '替换 README 视觉资源',
+      '阶段 4 全部',
+    ]) {
+      expect(checklist).toContain(`- [x] ${item}`);
+    }
+  });
+
+  it('ships a transparent logo lockup for mixed homepage surfaces', () => {
+    const transparentLogoPath = path.join(rootDir, 'brand/logo/redy-logo-lockup-transparent.png');
+
+    expect(readFileSync(transparentLogoPath).length).toBeGreaterThan(1000);
+    expect(readPngDimensions(transparentLogoPath)).toEqual({ width: 1254, height: 1254 });
+    expect(readPngColorType(transparentLogoPath)).toBe(6);
   });
 });
