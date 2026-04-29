@@ -1,7 +1,9 @@
+// 图片生成脚本负责读取本地代理配置、规范化请求载荷并下载生成结果。
 import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import { pathToFileURL } from 'node:url';
 
+// 允许的模型和调试账号层级集中定义，供校验逻辑与类型推导共用。
 const SUPPORTED_MODELS = ['gpt-5-3', 'gpt-5-4-thinking', 'gpt-5-4-thinkin'] as const;
 const DEBUG_ACCOUNT_TIERS = ['free', 'plus'] as const;
 
@@ -28,6 +30,9 @@ type GenerationPayload = {
   debug_account_tier?: DebugAccountTier;
 };
 
+/**
+ * 解析 .env.local 文本，保留脚本需要的键值对并忽略空行与注释。
+ */
 export function parseEnvFile(text: string): Record<string, string> {
   const env: Record<string, string> = {};
 
@@ -57,6 +62,9 @@ export function parseEnvFile(text: string): Record<string, string> {
   return env;
 }
 
+/**
+ * 从图片接口响应中提取可下载地址，过滤缺失或空字符串结果。
+ */
 export function extractImageUrls(payload: { data?: Array<{ b64_json?: string }> }): string[] {
   return (payload.data ?? []).flatMap((item) => {
     const value = item.b64_json;
@@ -64,6 +72,9 @@ export function extractImageUrls(payload: { data?: Array<{ b64_json?: string }> 
   });
 }
 
+/**
+ * 判断当前模块是否由命令行直接执行，避免测试导入时触发主流程。
+ */
 export function isCliEntrypoint(moduleUrl: string, argv1?: string): boolean {
   if (!argv1) {
     return false;
@@ -72,6 +83,9 @@ export function isCliEntrypoint(moduleUrl: string, argv1?: string): boolean {
   return moduleUrl === pathToFileURL(argv1).href;
 }
 
+/**
+ * 将 .env.local 读取异常转换为稳定错误文案，便于 CLI 和测试断言复用。
+ */
 export function toEnvReadErrorMessage(error: unknown): string {
   if (
     typeof error === 'object' &&
@@ -89,12 +103,18 @@ export function toEnvReadErrorMessage(error: unknown): string {
   return 'Failed to read .env.local.';
 }
 
+/**
+ * 生成本地图片保存路径，并沿用接口返回文件名保持来源可追溯。
+ */
 export function buildImageOutputPath(imageUrl: string, cwd: string): string {
   const parsedUrl = new URL(imageUrl);
   const fileName = path.basename(parsedUrl.pathname) || `generated-${Date.now()}.png`;
   return path.join(cwd, 'image', fileName);
 }
 
+/**
+ * 规范化图片生成参数，在系统边界处拦截缺失值和不支持的选项。
+ */
 export function normalizeGenerationPayload(input: GenerationPayloadInput): GenerationPayload {
   const prompt = typeof input.prompt === 'string' ? input.prompt.trim() : '';
 
@@ -163,6 +183,9 @@ export function normalizeGenerationPayload(input: GenerationPayloadInput): Gener
   return payload;
 }
 
+/**
+ * 执行图片生成命令：读取配置、请求本地代理、下载图片并输出 JSON 结果。
+ */
 async function main(): Promise<void> {
   try {
     const envPath = path.resolve(process.cwd(), '.env.local');
@@ -193,6 +216,7 @@ async function main(): Promise<void> {
     }
 
     const payload = normalizeGenerationPayload(JSON.parse(rawPayload) as GenerationPayloadInput);
+    // 脚本只访问仓库本地配置的图片代理，不直接绑定具体模型服务商。
     const response = await fetch(`${baseUrl}/v1/images/generations`, {
       method: 'POST',
       headers: {

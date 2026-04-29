@@ -1,8 +1,12 @@
+// 404 页面复用首页视觉语言，让异常路径也保持 Redy 品牌温度。
 import React from 'react';
 
 import chibiMascot from '../brand/tmp/redy-shape-d-chibi-sheet.png';
 import logoLockup from '../brand/logo/redy-logo-lockup-transparent.png';
 
+/**
+ * 渲染品牌化 404 页面，并提供回首页和应用场景区块的恢复路径。
+ */
 export default function NotFound() {
   return (
     <main className="page-shell not-found-shell">
@@ -10,6 +14,7 @@ export default function NotFound() {
       <div className="branch-glow branch-glow-left" />
       <div className="branch-glow branch-glow-right" />
 
+      {/* 404 内容沿用首页卡片和动效钩子，避免异常页形成另一套视觉系统。 */}
       <section className="not-found-card card-surface scroll-stage">
         <div className="not-found-card__copy">
           <p className="eyebrow">404 / Redy is searching</p>

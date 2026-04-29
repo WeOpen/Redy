@@ -596,8 +596,7 @@ img {
   margin-top: 30px;
 }
 
-.hero__notes span,
-.trait-pill {
+.hero__notes span {
   display: inline-flex;
   align-items: center;
   padding: 10px 14px;
@@ -623,8 +622,7 @@ img {
   animation-delay: 1.2s;
 }
 
-.hero__notes span:hover,
-.trait-pill:hover {
+.hero__notes span:hover {
   transform: translateY(-2px);
   border-color: var(--border-strong);
   background: #dde7f2;
@@ -940,10 +938,255 @@ img {
 }
 
 .trait-cloud {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  align-content: flex-start;
+  position: relative;
+  min-height: 560px;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 30% 20%, rgba(44, 198, 142, 0.08), transparent 30%),
+    radial-gradient(circle at 72% 72%, rgba(193, 75, 48, 0.07), transparent 34%),
+    linear-gradient(180deg, rgba(255, 252, 246, 0.94), rgba(250, 249, 245, 0.9));
+}
+
+.trait-cloud::before,
+.trait-cloud::after {
+  content: "";
+  position: absolute;
+  border-radius: 999px;
+  pointer-events: none;
+}
+
+.trait-cloud::before {
+  inset: 26px 42px auto auto;
+  width: 140px;
+  height: 140px;
+  border: 1px solid rgba(139, 110, 84, 0.16);
+  opacity: 0.7;
+}
+
+.trait-cloud::after {
+  left: 34px;
+  bottom: 36px;
+  width: 210px;
+  height: 2px;
+  background: linear-gradient(90deg, rgba(193, 75, 48, 0.45), rgba(44, 198, 142, 0.32), transparent);
+  transform: rotate(-5deg);
+}
+
+.trait-cloud__word {
+  position: absolute;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: max-content;
+  padding: 8px 12px;
+  border: 1px solid rgba(139, 110, 84, 0.18);
+  border-radius: 999px;
+  background: rgba(255, 252, 246, 0.68);
+  box-shadow: 0 12px 28px rgba(61, 61, 58, 0.06);
+  color: var(--ink);
+  font-family: var(--font-display);
+  font-weight: 650;
+  line-height: 1;
+  letter-spacing: 0;
+  white-space: nowrap;
+  transition:
+    transform 0.28s ease,
+    border-color 0.28s ease,
+    background-color 0.28s ease,
+    box-shadow 0.28s ease;
+}
+
+.trait-cloud__word:hover {
+  border-color: rgba(139, 110, 84, 0.4);
+  background: rgba(255, 248, 236, 0.92);
+  box-shadow: 0 18px 36px rgba(61, 61, 58, 0.09);
+}
+
+.trait-cloud__word-motion {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Desktop word positions are curated by copy order; update them together with the traits array. */
+.trait-cloud__word:nth-child(1) {
+  top: 12%;
+  left: 12%;
+  color: #1b365d;
+  font-size: 2.25rem;
+  transform: rotate(-6deg);
+}
+
+.trait-cloud__word:nth-child(1):hover {
+  transform: rotate(-6deg) translateY(-3px);
+}
+
+.trait-cloud__word:nth-child(2) {
+  top: 10%;
+  right: 16%;
+  color: #c14b30;
+  font-size: 2rem;
+  transform: rotate(5deg);
+}
+
+.trait-cloud__word:nth-child(2):hover {
+  transform: rotate(5deg) translateY(-3px);
+}
+
+.trait-cloud__word:nth-child(3) {
+  top: 30%;
+  left: 23%;
+  color: #8b6e54;
+  font-size: 2.65rem;
+  transform: rotate(2deg);
+}
+
+.trait-cloud__word:nth-child(3):hover {
+  transform: rotate(2deg) translateY(-3px);
+}
+
+.trait-cloud__word:nth-child(4) {
+  top: 47%;
+  right: 17%;
+  color: #2d2a2e;
+  font-size: 2.35rem;
+  transform: rotate(-4deg);
+}
+
+.trait-cloud__word:nth-child(4):hover {
+  transform: rotate(-4deg) translateY(-3px);
+}
+
+.trait-cloud__word:nth-child(5) {
+  top: 57%;
+  left: 13%;
+  color: #2cc68e;
+  font-size: 1.85rem;
+  transform: rotate(6deg);
+}
+
+.trait-cloud__word:nth-child(5):hover {
+  transform: rotate(6deg) translateY(-3px);
+}
+
+.trait-cloud__word:nth-child(6) {
+  right: 13%;
+  bottom: 14%;
+  color: #1b365d;
+  font-size: 1.85rem;
+  transform: rotate(3deg);
+}
+
+.trait-cloud__word:nth-child(6):hover {
+  transform: rotate(3deg) translateY(-3px);
+}
+
+.trait-cloud__word:nth-child(7) {
+  left: 10%;
+  bottom: 20%;
+  color: #8b6e54;
+  font-size: 1.45rem;
+  transform: rotate(-3deg);
+}
+
+.trait-cloud__word:nth-child(7):hover {
+  transform: rotate(-3deg) translateY(-3px);
+}
+
+.trait-cloud__word:nth-child(8) {
+  top: 74%;
+  left: 39%;
+  color: #c14b30;
+  font-size: 1.55rem;
+  transform: rotate(4deg);
+}
+
+.trait-cloud__word:nth-child(8):hover {
+  transform: rotate(4deg) translateY(-3px);
+}
+
+.trait-cloud__word:nth-child(9) {
+  top: 34%;
+  right: 8%;
+  color: #2cc68e;
+  font-size: 1.5rem;
+  transform: rotate(-7deg);
+}
+
+.trait-cloud__word:nth-child(9):hover {
+  transform: rotate(-7deg) translateY(-3px);
+}
+
+.trait-cloud__word:nth-child(10) {
+  top: 21%;
+  left: 43%;
+  color: #2d2a2e;
+  font-size: 1.2rem;
+  transform: rotate(-2deg);
+}
+
+.trait-cloud__word:nth-child(10):hover {
+  transform: rotate(-2deg) translateY(-3px);
+}
+
+.trait-cloud__word:nth-child(11) {
+  top: 40%;
+  left: 9%;
+  color: #2cc68e;
+  font-size: 1.28rem;
+  transform: rotate(7deg);
+}
+
+.trait-cloud__word:nth-child(11):hover {
+  transform: rotate(7deg) translateY(-3px);
+}
+
+.trait-cloud__word:nth-child(12) {
+  top: 63%;
+  left: 47%;
+  color: #1b365d;
+  font-size: 1.18rem;
+  transform: rotate(-6deg);
+}
+
+.trait-cloud__word:nth-child(12):hover {
+  transform: rotate(-6deg) translateY(-3px);
+}
+
+.trait-cloud__word:nth-child(13) {
+  top: 82%;
+  left: 17%;
+  color: #8b6e54;
+  font-size: 1.22rem;
+  transform: rotate(3deg);
+}
+
+.trait-cloud__word:nth-child(13):hover {
+  transform: rotate(3deg) translateY(-3px);
+}
+
+.trait-cloud__word:nth-child(14) {
+  top: 24%;
+  right: 4%;
+  color: #c14b30;
+  font-size: 1.16rem;
+  transform: rotate(6deg);
+}
+
+.trait-cloud__word:nth-child(14):hover {
+  transform: rotate(6deg) translateY(-3px);
+}
+
+.trait-cloud__word:nth-child(15) {
+  right: 35%;
+  bottom: 7%;
+  color: #2cc68e;
+  font-size: 1.26rem;
+  transform: rotate(-4deg);
+}
+
+.trait-cloud__word:nth-child(15):hover {
+  transform: rotate(-4deg) translateY(-3px);
 }
 
 .visual-gallery {
@@ -1483,6 +1726,10 @@ img {
     min-height: 420px;
   }
 
+  .trait-cloud {
+    min-height: 420px;
+  }
+
   .hero__lens-glow {
     left: 18%;
     width: 132px;
@@ -1541,6 +1788,29 @@ img {
 
   .hero__asset-strip {
     grid-template-columns: 1fr;
+  }
+
+  .trait-cloud {
+    /* Mobile switches from absolute placement to flow layout to avoid clipped words. */
+    display: flex;
+    min-height: 0;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .trait-cloud__word,
+  .trait-cloud__word:nth-child(n),
+  .trait-cloud__word:nth-child(n):hover {
+    position: static;
+    font-size: 1.12rem;
+    transform: none;
+  }
+
+  .trait-cloud__word:nth-child(3),
+  .trait-cloud__word:nth-child(4) {
+    font-size: 1.42rem;
   }
 
   .topbar {

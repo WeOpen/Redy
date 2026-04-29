@@ -1,5 +1,6 @@
 'use client';
 
+// 顶部导航负责移动端菜单、滚动进度和当前区块高亮，因此需要客户端状态。
 import { useEffect, useMemo, useState } from 'react';
 
 type NavigationItem = {
@@ -13,6 +14,9 @@ type TopbarNavProps = {
 
 const DEFAULT_ACTIVE = '#story';
 
+/**
+ * 渲染页面锚点导航，并根据滚动位置同步高亮状态和阅读进度。
+ */
 export default function TopbarNav({ items }: TopbarNavProps) {
   const [activeHref, setActiveHref] = useState<string>(DEFAULT_ACTIVE);
   const [progress, setProgress] = useState(0);
@@ -26,6 +30,7 @@ export default function TopbarNav({ items }: TopbarNavProps) {
         return;
       }
 
+      // 使用靠上的视口标记，让区块进入可读区域时就切换导航高亮。
       const viewportMarker = window.innerHeight * 0.28;
       let currentHref = items[0]?.href ?? DEFAULT_ACTIVE;
 
@@ -95,6 +100,7 @@ export default function TopbarNav({ items }: TopbarNavProps) {
       </div>
       <div className="topbar__progress" aria-hidden="true">
         <span className="topbar__progress-glow" />
+        {/* 保留极短基线，让页面刚加载时浮动顶栏不会显得悬空。 */}
         <span className="topbar__progress-bar" style={{ transform: `scaleX(${Math.max(progress, 0.06)})` }} />
       </div>
     </>

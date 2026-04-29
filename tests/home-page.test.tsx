@@ -1,9 +1,46 @@
+// 首页测试覆盖项目规范、分层结构、核心品牌叙事和移动端导航交互。
 import React from 'react';
+import { existsSync, readFileSync } from 'node:fs';
+import path from 'node:path';
 import { fireEvent, render, screen } from '@testing-library/react';
 import { describe, expect, it } from 'vitest';
 
 import HomePage from '@/app/page';
 import NotFound from '@/app/not-found';
+
+const rootDir = process.cwd();
+
+// 规范测试防止文档回退时丢失中文注释要求。
+describe('Project standards', () => {
+  it('documents Chinese file, method, and line comment rules', () => {
+    const projectStandards = readFileSync(path.join(rootDir, 'docs/project-standards.md'), 'utf8');
+
+    expect(projectStandards).toContain('文件注释');
+    expect(projectStandards).toContain('方法注释');
+    expect(projectStandards).toContain('行注释');
+    expect(projectStandards).toContain('中文注释');
+  });
+});
+
+// 架构测试确保首页继续保持 route-private 的内容、布局和区块分层。
+describe('HomePage architecture', () => {
+  it('keeps homepage content, layout chrome, and sections in route-private layers', () => {
+    for (const filePath of [
+      'app/_content/home.ts',
+      'app/_components/layout/topbar-nav.tsx',
+      'app/_components/layout/floating-actions.tsx',
+      'app/_components/sections/hero-section.tsx',
+      'app/_components/sections/story-section.tsx',
+      'app/_components/sections/traits-section.tsx',
+      'app/_components/sections/visual-system-section.tsx',
+      'app/_components/sections/use-cases-section.tsx',
+      'app/_components/sections/voice-section.tsx',
+      'app/_components/sections/site-footer.tsx',
+    ]) {
+      expect(existsSync(path.join(rootDir, filePath))).toBe(true);
+    }
+  });
+});
 
 describe('HomePage', () => {
   it('renders the core Redy brand story as a single-page site', () => {

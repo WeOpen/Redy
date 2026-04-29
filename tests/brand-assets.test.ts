@@ -1,9 +1,16 @@
+// 品牌资产测试校验 Logo、角色图、favicon、manifest 和交付清单之间的一致性。
 import { describe, expect, it } from 'vitest';
 import { existsSync, readFileSync } from 'node:fs';
 import path from 'node:path';
 
+import { metadata } from '@/app/layout';
+import manifest from '@/app/manifest';
+
 const rootDir = process.cwd();
 
+/**
+ * 直接读取 PNG IHDR 宽高，避免测试环境额外依赖图片处理工具。
+ */
 function readPngDimensions(filePath: string) {
   const buffer = readFileSync(filePath);
 
@@ -13,6 +20,9 @@ function readPngDimensions(filePath: string) {
   };
 }
 
+/**
+ * 读取 PNG 色彩类型，用于确认 favicon 和透明资产保留 alpha 通道。
+ */
 function readPngColorType(filePath: string) {
   return readFileSync(filePath).readUInt8(25);
 }
@@ -217,5 +227,40 @@ describe('brand asset delivery', () => {
     expect(readFileSync(transparentLogoPath).length).toBeGreaterThan(1000);
     expect(readPngDimensions(transparentLogoPath)).toEqual({ width: 1254, height: 1254 });
     expect(readPngColorType(transparentLogoPath)).toBe(6);
+  });
+
+  it('wires transparent Redy favicons for browser, Apple, and install surfaces', () => {
+    const transparentIconPath = path.join(rootDir, 'brand/icons/redy-icon-primary-transparent.png');
+    const faviconSizes = [16, 32, 48, 64, 96, 128, 180, 192, 256, 512];
+
+    expect(readPngDimensions(transparentIconPath)).toEqual({ width: 1254, height: 1254 });
+    expect(readPngColorType(transparentIconPath)).toBe(6);
+
+    for (const size of faviconSizes) {
+      const filePath = path.join(rootDir, `public/favicons/favicon-${size}x${size}.png`);
+
+      expect(readPngDimensions(filePath)).toEqual({ width: size, height: size });
+      expect(readPngColorType(filePath)).toBe(6);
+    }
+
+    expect(metadata.manifest).toBe('/manifest.webmanifest');
+    expect(metadata.icons).toMatchObject({
+      apple: [{ url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' }],
+      shortcut: [{ url: '/favicon.ico' }],
+    });
+    expect(JSON.stringify(metadata.icons)).toContain('/favicons/favicon-16x16.png');
+    expect(JSON.stringify(metadata.icons)).toContain('/favicons/favicon-512x512.png');
+
+    expect(manifest()).toMatchObject({
+      short_name: 'Redy',
+      start_url: '/',
+      scope: '/',
+      display: 'standalone',
+      icons: [
+        { src: '/android-chrome-192x192.png', sizes: '192x192', type: 'image/png', purpose: 'any' },
+        { src: '/android-chrome-512x512.png', sizes: '512x512', type: 'image/png', purpose: 'any' },
+        { src: '/android-chrome-512x512.png', sizes: '512x512', type: 'image/png', purpose: 'maskable' },
+      ],
+    });
   });
 });

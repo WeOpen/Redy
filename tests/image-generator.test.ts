@@ -1,3 +1,4 @@
+// 图片生成脚本测试覆盖环境解析、请求载荷归一化、输出路径和 CLI 欢迎文案。
 import { describe, expect, it } from 'vitest';
 import path from 'node:path';
 import { pathToFileURL } from 'node:url';
@@ -11,6 +12,7 @@ import {
 } from '@/scripts/image-generator';
 import { REDY_WELCOME_LINES, renderRedyWelcome } from '@/scripts/redy-welcome';
 
+// helper 测试固定脚本边界行为，避免真实调用图片服务。
 describe('image generator helpers', () => {
   it('parses IMAGE_API_BASE_URL and IMAGE_API_KEY from env text', () => {
     const env = parseEnvFile('IMAGE_API_BASE_URL=https://api.example.com\nIMAGE_API_KEY=secret\n');

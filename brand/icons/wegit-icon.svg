@@ -1,13 +1,40 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="title desc">
   <title id="title">WeGit Primary Icon</title>
-  <desc id="desc">Branch graph and commit nodes in the Redy brand system.</desc>
-  <rect width="256" height="256" rx="56" fill="#F8F5F0"/>
-  <rect x="34" y="42" width="188" height="172" rx="28" fill="#F6F1E9" stroke="#8B6E54" stroke-width="10"/>
-  <path d="M72 78v92c0 18 15 32 33 32h78" fill="none" stroke="#2D2A2E" stroke-width="10" stroke-linecap="round"/>
-  <path d="M72 126h54c19 0 34-15 34-34V78" fill="none" stroke="#2CC68E" stroke-width="10" stroke-linecap="round"/>
-  <circle cx="72" cy="78" r="16" fill="#2CC68E" stroke="#2D2A2E" stroke-width="6"/>
-  <circle cx="160" cy="78" r="16" fill="#F6F1E9" stroke="#2D2A2E" stroke-width="6"/>
-  <circle cx="72" cy="170" r="16" fill="#F6F1E9" stroke="#2D2A2E" stroke-width="6"/>
-  <circle cx="183" cy="202" r="16" fill="#2CC68E" stroke="#2D2A2E" stroke-width="6"/>
-  <path d="M54 54h148" stroke="#8B6E54" stroke-width="6" stroke-linecap="round" opacity=".65"/>
+  <desc id="desc">Repository window with file list, branch graph, and commit nodes in the Redy brand system.</desc>
+  <defs>
+    <linearGradient id="base" x1="42" y1="24" x2="214" y2="232" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFF7EA"/>
+      <stop offset="1" stop-color="#EAD8BE"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-15%" y="-15%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="5" stdDeviation="5" flood-color="#8B6E54" flood-opacity=".22"/>
+    </filter>
+  </defs>
+  <g transform="translate(14 14) scale(.89)" data-fit="png-reference">
+  <rect x="18" y="18" width="220" height="220" rx="46" fill="url(#base)" stroke="#8B6E54" stroke-width="4"/>
+  <rect x="30" y="30" width="196" height="196" rx="38" fill="none" stroke="#F6F1E9" stroke-width="5" opacity=".7"/>
+  <g filter="url(#soft-shadow)">
+    <rect x="50" y="54" width="156" height="150" rx="20" fill="#F6F1E9" stroke="#8B6E54" stroke-width="5"/>
+    <path d="M50 84h156" stroke="#8B6E54" stroke-width="4"/>
+    <circle cx="71" cy="70" r="6" fill="#C14B30" stroke="#8B6E54" stroke-width="2"/>
+    <circle cx="88" cy="70" r="6" fill="#F2C85F" stroke="#8B6E54" stroke-width="2"/>
+    <circle cx="105" cy="70" r="6" fill="#2CC68E" stroke="#8B6E54" stroke-width="2"/>
+    <rect x="60" y="88" width="45" height="105" fill="#F0E6D6" stroke="#D1B892" stroke-width="3"/>
+    <path d="M74 105h16M74 128h16M74 151h16M74 174h16" stroke="#CDBA9E" stroke-width="5" stroke-linecap="round"/>
+    <path d="M122 109h49M122 128h36M122 167h54M122 184h35" stroke="#CDBA9E" stroke-width="5" stroke-linecap="round"/>
+    <path d="M154 109h22M154 128h16M154 167h25" stroke="#2D2A2E" stroke-width="3" stroke-linecap="round" opacity=".28"/>
+    <path d="M128 99v84" fill="none" stroke="#2CC68E" stroke-width="7" stroke-linecap="round"/>
+    <path d="M128 143h35c15 0 27 12 27 27" fill="none" stroke="#7AA04C" stroke-width="7" stroke-linecap="round"/>
+    <path d="M128 122h34" stroke="#7AA04C" stroke-width="6" stroke-linecap="round"/>
+    <circle cx="128" cy="99" r="12" fill="#DDF4C5" stroke="#8B6E54" stroke-width="4"/>
+    <circle cx="128" cy="122" r="12" fill="#DDF4C5" stroke="#8B6E54" stroke-width="4"/>
+    <circle cx="128" cy="145" r="12" fill="#DDF4C5" stroke="#8B6E54" stroke-width="4"/>
+    <circle cx="189" cy="170" r="12" fill="#DDF4C5" stroke="#8B6E54" stroke-width="4"/>
+    <path d="M139 99h22M139 122h31M139 145h20" stroke="#8B6E54" stroke-width="4" stroke-linecap="round" opacity=".45"/>
+    <circle cx="128" cy="99" r="6" fill="#2CC68E"/>
+    <circle cx="128" cy="122" r="6" fill="#2CC68E"/>
+    <circle cx="128" cy="145" r="6" fill="#2CC68E"/>
+    <circle cx="189" cy="170" r="6" fill="#7AA04C"/>
+  </g>
+  </g>
 </svg>
