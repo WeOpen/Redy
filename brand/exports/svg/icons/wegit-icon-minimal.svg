@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title desc">
+  <title id="title">WeGit Minimal Icon</title>
+  <desc id="desc">Minimal rounded tile with repository window, branch graph, and commit nodes.</desc>
+  <g transform="translate(18 18) scale(.72)" data-fit="png-reference">
+  <rect x="10" y="10" width="108" height="108" rx="25" fill="#F8F5F0" stroke="#8B6E54" stroke-width="3"/>
+  <rect x="17" y="17" width="94" height="94" rx="21" fill="none" stroke="#F6F1E9" stroke-width="4"/>
+  <rect x="29" y="31" width="70" height="68" rx="12" fill="#F6F1E9" stroke="#8B6E54" stroke-width="4"/>
+  <path d="M29 47h70" stroke="#8B6E54" stroke-width="3"/>
+  <circle cx="41" cy="39" r="3" fill="#C14B30"/>
+  <circle cx="52" cy="39" r="3" fill="#F2C85F"/>
+  <circle cx="63" cy="39" r="3" fill="#2CC68E"/>
+  <path d="M42 59h9M42 73h9M42 87h9" stroke="#CDBA9E" stroke-width="4" stroke-linecap="round"/>
+  <path d="M76 58h13M76 73h10" stroke="#2D2A2E" stroke-width="2.5" stroke-linecap="round" opacity=".28"/>
+  <path d="M65 54v39" fill="none" stroke="#2CC68E" stroke-width="4" stroke-linecap="round"/>
+  <path d="M65 75h18c8 0 14 6 14 14" fill="none" stroke="#7AA04C" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="65" cy="54" r="7" fill="#DDF4C5" stroke="#8B6E54" stroke-width="3"/>
+  <circle cx="65" cy="74" r="7" fill="#DDF4C5" stroke="#8B6E54" stroke-width="3"/>
+  <circle cx="65" cy="94" r="7" fill="#DDF4C5" stroke="#8B6E54" stroke-width="3"/>
+  <circle cx="96" cy="88" r="7" fill="#DDF4C5" stroke="#8B6E54" stroke-width="3"/>
+  </g>
+</svg>

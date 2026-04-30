@@ -1,6 +1,6 @@
 // 品牌资产测试校验 Logo、角色图、favicon、manifest 和交付清单之间的一致性。
 import { describe, expect, it } from 'vitest';
-import { existsSync, readFileSync } from 'node:fs';
+import { existsSync, readdirSync, readFileSync } from 'node:fs';
 import path from 'node:path';
 
 import { metadata } from '@/app/layout';
@@ -262,5 +262,118 @@ describe('brand asset delivery', () => {
         { src: '/android-chrome-512x512.png', sizes: '512x512', type: 'image/png', purpose: 'maskable' },
       ],
     });
+  });
+
+  it('ships the stage 5 export, Figma handoff, motion token, and guideline archive files', () => {
+    const requiredFiles = [
+      'brand/logo/weopen-redy-primary.svg',
+      'brand/exports/README.md',
+      'brand/exports/svg/README.md',
+      'brand/exports/png/README.md',
+      'brand/exports/svg/logo/weopen-redy-primary.svg',
+      'brand/exports/svg/icons/wemail-icon.svg',
+      'brand/exports/svg/icons/wegit-icon.svg',
+      'brand/exports/svg/icons/weopen-icon.svg',
+      'brand/exports/png/mascot/redy-chibi.png',
+      'brand/exports/png/banners/wemail-readme-header.png',
+      'brand/exports/png/banners/wegit-readme-header.png',
+      'brand/exports/png/banners/weopen-readme-header.png',
+      'brand/figma/README.md',
+      'brand/guidelines/redy-readme-banner-usage.md',
+      'brand/guidelines/redy-asset-checklist.md',
+      'brand/guidelines/redy-delivery-archive-2026-04-30.md',
+      'brand/guidelines/redy-brand-guidelines.pdf',
+      'brand/motion/redy-motion-guidelines.md',
+      'brand/tokens/motion.tokens.json',
+    ];
+
+    for (const assetPath of requiredFiles) {
+      expect(readFileSync(path.join(rootDir, assetPath)).length).toBeGreaterThan(100);
+    }
+
+    const motionTokens = JSON.parse(readFileSync(path.join(rootDir, 'brand/tokens/motion.tokens.json'), 'utf8'));
+    expect(motionTokens.motion.duration.base.$value).toBe('240ms');
+    expect(motionTokens.motion.pattern.goggleGlint.$description).toContain('Git-green lens glint');
+    expect(motionTokens.motion.accessibility.reducedMotion.$value).toBe(true);
+
+    const figmaHandoff = readFileSync(path.join(rootDir, 'brand/figma/README.md'), 'utf8');
+    expect(figmaHandoff).toContain('No native `.fig` or `.figma` file is present');
+    expect(figmaHandoff).toContain('brand/exports/svg/icons/*');
+
+    const checklist = readFileSync(path.join(rootDir, 'DeliveryChecklist.md'), 'utf8');
+    for (const item of [
+      '整理 SVG 导出包',
+      '整理 PNG 导出包',
+      '整理 Figma 源文件',
+      '输出 motion tokens',
+      '输出最终品牌规范 PDF',
+      '输出最终交付清单归档版本',
+    ]) {
+      expect(checklist).toContain(`- [x] ${item}`);
+    }
+  });
+
+  it('ships the stage 6 communication, motion, sticker, and merch assets', () => {
+    const requiredFiles = [
+      'brand/stickers/redy-community-sticker-pack-v1.png',
+      'brand/stickers/redy-community-sticker-animated.svg',
+      'brand/stickers/redy-sticker-pack-v1.md',
+      'brand/posters/redy-event-poster-kv-v1.png',
+      'brand/posters/redy-event-poster-kv-v1.md',
+      'brand/motion/redy-loading-goggle-glint.svg',
+      'brand/motion/redy-status-feedback-motion.svg',
+      'brand/motion/redy-phase6-motion-delivery.md',
+      'brand/merch/redy-merch-sampling-board-v1.png',
+      'brand/merch/redy-merch-sampling-plan.md',
+      'brand/guidelines/redy-phase6-delivery.md',
+      'scripts/generate-phase6-assets.py',
+    ];
+
+    for (const assetPath of requiredFiles) {
+      expect(readFileSync(path.join(rootDir, assetPath)).length).toBeGreaterThan(100);
+    }
+
+    expect(readPngDimensions(path.join(rootDir, 'brand/stickers/redy-community-sticker-pack-v1.png'))).toEqual({
+      width: 1536,
+      height: 1024,
+    });
+    expect(readPngDimensions(path.join(rootDir, 'brand/posters/redy-event-poster-kv-v1.png'))).toEqual({
+      width: 1054,
+      height: 1492,
+    });
+    expect(readPngDimensions(path.join(rootDir, 'brand/merch/redy-merch-sampling-board-v1.png'))).toEqual({
+      width: 1600,
+      height: 1000,
+    });
+
+    const stickerFiles = readdirSync(path.join(rootDir, 'brand/stickers')).filter((fileName) =>
+      /^redy-sticker-\d{2}-.*\.png$/.test(fileName),
+    );
+    expect(stickerFiles).toHaveLength(8);
+
+    const stickerGuide = readFileSync(path.join(rootDir, 'brand/stickers/redy-sticker-pack-v1.md'), 'utf8');
+    expect(stickerGuide).toContain('not cropped from the old reference sheet');
+
+    const loadingSvg = readFileSync(path.join(rootDir, 'brand/motion/redy-loading-goggle-glint.svg'), 'utf8');
+    const feedbackSvg = readFileSync(path.join(rootDir, 'brand/motion/redy-status-feedback-motion.svg'), 'utf8');
+    const posterGuide = readFileSync(path.join(rootDir, 'brand/posters/redy-event-poster-kv-v1.md'), 'utf8');
+    expect(loadingSvg).toContain('prefers-reduced-motion');
+    expect(loadingSvg).toContain('Redy Loading Goggle Glint');
+    expect(feedbackSvg).toContain('Redy Success and Error Feedback Motion');
+    expect(feedbackSvg).toContain('prefers-reduced-motion');
+    expect(posterGuide).toContain('manually revised');
+    expect(posterGuide).toContain('Do not delete, overwrite, crop, or regenerate');
+
+    const checklist = readFileSync(path.join(rootDir, 'DeliveryChecklist.md'), 'utf8');
+    for (const item of [
+      '完成贴纸初版',
+      '完成海报 KV',
+      '完成 Loading 动效',
+      '完成状态反馈动效',
+      '启动周边打样',
+      '阶段 6 中动效与传播物料',
+    ]) {
+      expect(checklist).toContain(`- [x] ${item}`);
+    }
   });
 });

@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-labelledby="title desc">
+  <title id="title">Redy Loading Goggle Glint</title>
+  <desc id="desc">A reduced Redy loading animation using a soft Git-green lens glint and branch pulse.</desc>
+  <style>
+    :root {
+      --redy-rust: #C14B30;
+      --cream: #F6F1E9;
+      --charcoal: #2D2A2E;
+      --git-green: #2CC68E;
+      --warm-rice: #F8F5F0;
+      --soft-brown: #8B6E54;
+    }
+    .glint { animation: glint 1.6s cubic-bezier(.2,0,0,1) infinite; transform-origin: center; }
+    .node { animation: pulse .96s cubic-bezier(.2,0,0,1) infinite; transform-origin: center; }
+    .node:nth-of-type(2) { animation-delay: .12s; }
+    .node:nth-of-type(3) { animation-delay: .24s; }
+    @keyframes glint {
+      0%, 100% { opacity: .18; transform: translateX(-18px); }
+      50% { opacity: .72; transform: translateX(18px); }
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: .64; transform: scale(1); }
+      50% { opacity: 1; transform: scale(1.08); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .glint, .node { animation: none; }
+    }
+  </style>
+  <rect width="640" height="360" rx="42" fill="var(--warm-rice)"/>
+  <circle cx="320" cy="152" r="82" fill="var(--redy-rust)" stroke="var(--soft-brown)" stroke-width="8"/>
+  <path d="M252 112 226 62l58 22zM388 112l26-50-58 22z" fill="var(--redy-rust)" stroke="var(--soft-brown)" stroke-width="7" stroke-linejoin="round"/>
+  <path d="M268 162c18-22 36-32 52-32s34 10 52 32c-18 22-36 32-52 32s-34-10-52-32z" fill="var(--cream)"/>
+  <path d="M242 150h156" stroke="var(--charcoal)" stroke-width="14" stroke-linecap="round"/>
+  <circle cx="282" cy="150" r="35" fill="#20352E" stroke="var(--soft-brown)" stroke-width="7"/>
+  <circle cx="358" cy="150" r="35" fill="#20352E" stroke="var(--soft-brown)" stroke-width="7"/>
+  <path d="M270 140 288 150 270 161M296 168h18" fill="none" stroke="var(--git-green)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M350 132v35M350 132l18 11M350 167l18-11" fill="none" stroke="var(--git-green)" stroke-width="6" stroke-linecap="round"/>
+  <path class="glint" d="M258 126h36M334 126h36" stroke="#F6F1E9" stroke-width="7" stroke-linecap="round"/>
+  <path d="M284 218c16 14 56 14 72 0" fill="none" stroke="var(--charcoal)" stroke-width="8" stroke-linecap="round"/>
+  <g transform="translate(245 274)" fill="none" stroke="var(--git-green)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M0 26 62-12h118"/>
+    <circle class="node" cx="0" cy="26" r="13" fill="var(--warm-rice)"/>
+    <circle class="node" cx="62" cy="-12" r="13" fill="var(--warm-rice)"/>
+    <circle class="node" cx="180" cy="-12" r="13" fill="var(--warm-rice)"/>
+  </g>
+  <text x="320" y="330" text-anchor="middle" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" fill="var(--soft-brown)">Loading open-source warmth...</text>
+</svg>

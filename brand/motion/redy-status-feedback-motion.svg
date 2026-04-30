@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" role="img" aria-labelledby="title desc">
+  <title id="title">Redy Success and Error Feedback Motion</title>
+  <desc id="desc">Two Redy feedback states for success and error using restrained branch pulse and lens glow motion.</desc>
+  <style>
+    .pulse { animation: pulse .96s cubic-bezier(.2,0,0,1) infinite; transform-origin: center; }
+    .shake { animation: nudge 1.2s cubic-bezier(.2,0,0,1) infinite; transform-origin: center; }
+    .glow { animation: glow 1.6s cubic-bezier(.2,0,0,1) infinite; }
+    @keyframes pulse { 0%,100% { transform: scale(1); opacity: .72; } 50% { transform: scale(1.08); opacity: 1; } }
+    @keyframes nudge { 0%,100% { transform: translateX(0); } 12% { transform: translateX(-3px); } 24% { transform: translateX(3px); } 36% { transform: translateX(0); } }
+    @keyframes glow { 0%,100% { opacity: .35; } 50% { opacity: .9; } }
+    @media (prefers-reduced-motion: reduce) { .pulse, .shake, .glow { animation: none; } }
+  </style>
+  <rect width="960" height="420" rx="42" fill="#F8F5F0"/>
+  <g transform="translate(48 52)">
+    <rect width="400" height="316" rx="34" fill="#FFF9F0" stroke="#D8C8B4" stroke-width="3"/>
+    <circle cx="96" cy="108" r="54" fill="#C14B30" stroke="#8B6E54" stroke-width="6"/>
+    <circle cx="78" cy="104" r="21" fill="#20352E" stroke="#8B6E54" stroke-width="5"/>
+    <circle cx="114" cy="104" r="21" fill="#20352E" stroke="#8B6E54" stroke-width="5"/>
+    <path class="glow" d="M68 98 78 104 68 111M106 91v25M106 91l13 8M106 116l13-8" fill="none" stroke="#2CC68E" stroke-width="4" stroke-linecap="round"/>
+    <path d="M79 142c9 8 25 8 34 0" fill="none" stroke="#2D2A2E" stroke-width="5" stroke-linecap="round"/>
+    <circle class="pulse" cx="300" cy="108" r="42" fill="#DDF7EE" stroke="#2CC68E" stroke-width="7"/>
+    <path d="M280 108l16 17 32-38" fill="none" stroke="#2F4F46" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="52" y="220" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="32" font-weight="800" fill="#2D2A2E">Merge 完成</text>
+    <text x="52" y="264" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="22" fill="#8B6E54">Ready to open, ready to collaborate.</text>
+  </g>
+  <g transform="translate(512 52)">
+    <rect width="400" height="316" rx="34" fill="#FFF9F0" stroke="#D8C8B4" stroke-width="3"/>
+    <g class="shake">
+      <circle cx="96" cy="108" r="54" fill="#C14B30" stroke="#8B6E54" stroke-width="6"/>
+      <circle cx="78" cy="104" r="21" fill="#20352E" stroke="#8B6E54" stroke-width="5"/>
+      <circle cx="114" cy="104" r="21" fill="#20352E" stroke="#8B6E54" stroke-width="5"/>
+      <path d="M77 145c9-8 25-8 34 0" fill="none" stroke="#2D2A2E" stroke-width="5" stroke-linecap="round"/>
+    </g>
+    <circle cx="300" cy="108" r="42" fill="#FDE8BC" stroke="#C14B30" stroke-width="7"/>
+    <path d="M282 90l36 36M318 90l-36 36" fill="none" stroke="#C14B30" stroke-width="9" stroke-linecap="round"/>
+    <text x="52" y="220" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="32" font-weight="800" fill="#2D2A2E">需要检查</text>
+    <text x="52" y="264" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="22" fill="#8B6E54">Redy is watching the branch.</text>
+  </g>
+</svg>

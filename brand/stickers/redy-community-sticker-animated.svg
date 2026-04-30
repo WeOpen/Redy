@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Redy Animated Community Sticker</title>
+  <desc id="desc">A lightweight animated Redy sticker with a tiny wave and Git-green lens glow.</desc>
+  <style>
+    .paw { animation: wave .72s cubic-bezier(.18,.9,.22,1) infinite; transform-origin: 166px 260px; }
+    .lens { animation: glow 1.6s cubic-bezier(.2,0,0,1) infinite; }
+    @keyframes wave { 0%,100% { transform: rotate(0deg); } 35% { transform: rotate(8deg); } 70% { transform: rotate(-3deg); } }
+    @keyframes glow { 0%,100% { opacity: .45; } 50% { opacity: 1; } }
+    @media (prefers-reduced-motion: reduce) { .paw, .lens { animation: none; } }
+  </style>
+  <rect width="512" height="512" rx="88" fill="#F8F5F0"/>
+  <circle cx="256" cy="250" r="150" fill="#C14B30" stroke="#8B6E54" stroke-width="11"/>
+  <path d="M148 167 104 74l101 45zM364 167l44-93-101 45z" fill="#C14B30" stroke="#8B6E54" stroke-width="10" stroke-linejoin="round"/>
+  <path d="M162 260c33-44 64-64 94-64s61 20 94 64c-31 45-63 66-94 66s-63-21-94-66z" fill="#F6F1E9"/>
+  <path d="M133 237h246" stroke="#2D2A2E" stroke-width="21" stroke-linecap="round"/>
+  <circle cx="202" cy="236" r="50" fill="#20352E" stroke="#8B6E54" stroke-width="10"/>
+  <circle cx="310" cy="236" r="50" fill="#20352E" stroke="#8B6E54" stroke-width="10"/>
+  <path class="lens" d="M185 220 211 236 185 253M222 262h26M299 209v54M299 209l32 20M299 263l32-20" fill="none" stroke="#2CC68E" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M226 322c16 15 44 15 60 0" fill="none" stroke="#2D2A2E" stroke-width="9" stroke-linecap="round"/>
+  <circle cx="256" cy="299" r="16" fill="#2D2A2E"/>
+  <g class="paw">
+    <circle cx="139" cy="315" r="38" fill="#3A2D27" stroke="#8B6E54" stroke-width="7"/>
+    <circle cx="122" cy="298" r="9" fill="#F1B17D"/>
+    <circle cx="143" cy="290" r="9" fill="#F1B17D"/>
+    <circle cx="164" cy="300" r="9" fill="#F1B17D"/>
+  </g>
+  <text x="256" y="448" text-anchor="middle" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="34" font-weight="800" fill="#2D2A2E">Ready!</text>
+</svg>

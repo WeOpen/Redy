@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title desc">
+  <title id="title">WeMail Minimal Icon</title>
+  <desc id="desc">Minimal rounded tile with cloud-backed envelope and wax seal.</desc>
+  <g transform="translate(18 18) scale(.72)" data-fit="png-reference">
+  <rect x="10" y="10" width="108" height="108" rx="25" fill="#F8F5F0" stroke="#8B6E54" stroke-width="3"/>
+  <rect x="17" y="17" width="94" height="94" rx="21" fill="none" stroke="#F6F1E9" stroke-width="4"/>
+  <path d="M34 62c-7-1-12-6-12-13 0-8 7-15 15-15 3 0 5 1 7 2 5-10 14-16 26-16 14 0 26 10 29 23 2-1 4-1 7-1 9 0 16 7 16 16 0 8-7 15-15 16H38c-1 0-3 0-4-1z" fill="#D7DEE0" stroke="#8B6E54" stroke-width="3.5"/>
+  <rect x="30" y="53" width="68" height="43" rx="8" fill="#F6F1E9" stroke="#8B6E54" stroke-width="4"/>
+  <path d="M34 60l30 23 30-23" fill="none" stroke="#8B6E54" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M36 61l28 21 28-21" fill="none" stroke="#2D2A2E" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" opacity=".35"/>
+  <path d="M35 90l22-20M93 90L71 70" fill="none" stroke="#B18A63" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="64" cy="84" r="12" fill="#C14B30" stroke="#8B6E54" stroke-width="3"/>
+  <path d="M58 82c1 5 4 7 6 7 3 0 4-6 1-6s0 7 4 7c2 0 5-3 6-8" fill="none" stroke="#F6F1E9" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>

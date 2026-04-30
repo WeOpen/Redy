@@ -20,7 +20,7 @@
 - [x] Redy 主 Logo
 - [x] Redy 极简头像
 - [x] Redy 标准立绘
-- [ ] Redy Q 版迷你版
+- [x] Redy Q 版迷你版
 - [x] GitHub Header 首版
 - [x] 官网 Hero 主视觉首版
 
@@ -42,9 +42,9 @@
 - [x] 品牌色板文件
 - [x] Token 文件
 - [x] 图标导出规范
-- [ ] README / Banner 使用规范
+- [x] README / Banner 使用规范
 - [x] SVG / PNG 输出包
-- [ ] Figma 源文件整理
+- [x] Figma 源文件整理
 
 ## 4. 三项目识别重点
 
@@ -69,7 +69,7 @@
 - [x] `brand/logo/weopen-redy-primary.svg`
 - [x] `brand/logo/weopen-redy-avatar.png`
 - [x] `brand/mascot/standard/redy-full-body.png`
-- [ ] `brand/mascot/chibi/redy-chibi.png`
+- [x] `brand/mascot/chibi/redy-chibi.png`
 - [x] `brand/scenes/github-header-weopen.png`
 
 ### 5.2 三项目
@@ -94,12 +94,14 @@
 
 ### 5.3 规范
 - [x] `brand/tokens/color.tokens.json`
-- [ ] `brand/tokens/motion.tokens.json`
-- [ ] `brand/guidelines/redy-brand-guidelines.pdf`
+- [x] `brand/tokens/motion.tokens.json`
+- [x] `brand/guidelines/redy-brand-guidelines.pdf`
 - [x] `brand/guidelines/redy-brand-guidelines.md`
 - [x] `brand/guidelines/redy-three-view-structure.md`
 - [x] `brand/guidelines/redy-t15-icon-system-review.md`
-- [ ] `brand/guidelines/redy-asset-checklist.md`
+- [x] `brand/guidelines/redy-asset-checklist.md`
+- [x] `brand/guidelines/redy-readme-banner-usage.md`
+- [x] `brand/figma/README.md`
 
 ## 6. 协作分工
 
@@ -112,7 +114,7 @@
 - [x] 输出标准立绘
 - [ ] 输出园丁场景版
 - [ ] 输出 404 困惑版
-- [ ] 输出贴纸初版
+- [x] 输出贴纸初版
 
 ### 图标 / 资产设计
 - [x] 输出三项目主图标
@@ -127,10 +129,10 @@
 - [x] 替换 GitHub / README 展示资源
 
 ### 动效 / 传播设计
-- [ ] Loading 动效
-- [ ] 成功 / 错误反馈动效
-- [ ] 活动海报 KV
-- [ ] 社群贴纸动图版
+- [x] Loading 动效
+- [x] 成功 / 错误反馈动效
+- [x] 活动海报 KV
+- [x] 社群贴纸动图版
 
 ## 7. 推荐执行顺序
 
@@ -138,15 +140,15 @@
 2. [ ] 再完成三项目图标与 Badge
 3. [ ] 再完成 README 头图与 GitHub Header
 4. [x] 然后接入官网 Hero、404、CLI 等数字场景
-5. [ ] 最后扩展贴纸、动效、海报与周边
+5. [x] 最后扩展贴纸、动效、海报与周边
 
 ## 8. 验收标准
 
 - [ ] 三项目能一眼区分，但仍明显属于 WeOpen 同一品牌系统
 - [x] GitHub、官网、README 已有一套可直接上线的完整视觉资产
-- [ ] SVG、PNG、Figma 源文件与 Token 文件齐备
-- [ ] 视觉规范、导出文件与实际使用场景保持一致
-- [ ] WeMail 蜡封元素已进入图标或场景体系，而非仅停留在文案层
+- [x] SVG、PNG、Figma 源文件与 Token 文件齐备
+- [x] 视觉规范、导出文件与实际使用场景保持一致
+- [x] WeMail 蜡封元素已进入图标或场景体系，而非仅停留在文案层
 
 ## 9. 可执行 TODO 路线表
 
@@ -185,20 +187,20 @@
 - [x] 替换 README 视觉资源
 
 ### 阶段 5：规范与源文件整理
-- [ ] 整理 SVG 导出包
-- [ ] 整理 PNG 导出包
-- [ ] 整理 Figma 源文件
+- [x] 整理 SVG 导出包
+- [x] 整理 PNG 导出包
+- [x] 整理 Figma 源文件
 - [x] 输出 color tokens
-- [ ] 输出 motion tokens
-- [ ] 输出最终品牌规范 PDF
-- [ ] 输出最终交付清单归档版本
+- [x] 输出 motion tokens
+- [x] 输出最终品牌规范 PDF
+- [x] 输出最终交付清单归档版本
 
 ### 阶段 6：传播与扩展
-- [ ] 完成贴纸初版
-- [ ] 完成海报 KV
-- [ ] 完成 Loading 动效
-- [ ] 完成状态反馈动效
-- [ ] 启动周边打样
+- [x] 完成贴纸初版
+- [x] 完成海报 KV
+- [x] 完成 Loading 动效
+- [x] 完成状态反馈动效
+- [x] 启动周边打样
 
 ## 10. 建议任务分发方式
 
@@ -214,14 +216,14 @@
 - [x] Redy 标准立绘
 - [ ] Redy 场景版
 - [ ] 404 困惑版
-- [ ] 贴纸初版
+- [x] 贴纸初版
 
 ### 给前端
 - [x] 阶段 4 全部
 - [x] 配合验收资源接入效果
 
 ### 给动效 / 传播设计
-- [ ] 阶段 6 中动效与传播物料
+- [x] 阶段 6 中动效与传播物料
 
 ## 11. 任务表格版
 

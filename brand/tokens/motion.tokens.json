@@ -1,0 +1,113 @@
+{
+  "$schema": "https://tokens.studio/schemas/tokens.json",
+  "meta": {
+    "name": "WeOpen Redy Motion Tokens",
+    "version": "0.1.0",
+    "task": "T27",
+    "description": "Motion timing, easing, and interaction patterns for Redy brand surfaces, loaders, feedback states, and lightweight mascot moments."
+  },
+  "motion": {
+    "duration": {
+      "instant": {
+        "$type": "duration",
+        "$value": "80ms",
+        "$description": "Tiny state changes such as icon tint, focus ring, and CLI cursor feedback."
+      },
+      "fast": {
+        "$type": "duration",
+        "$value": "160ms",
+        "$description": "Button hover, badge reveal, and small affordance transitions."
+      },
+      "base": {
+        "$type": "duration",
+        "$value": "240ms",
+        "$description": "Default UI motion for panels, cards, and gentle Redy expression changes."
+      },
+      "slow": {
+        "$type": "duration",
+        "$value": "420ms",
+        "$description": "Mascot entrance, 404 helper reveal, and README banner detail fade."
+      },
+      "ambient": {
+        "$type": "duration",
+        "$value": "1600ms",
+        "$description": "Soft idle loops such as goggle glint, branch pulse, or tail breathing."
+      }
+    },
+    "easing": {
+      "standard": {
+        "$type": "cubicBezier",
+        "$value": [0.2, 0, 0, 1],
+        "$description": "Calm default easing. Use for most Redy UI and brand transitions."
+      },
+      "enter": {
+        "$type": "cubicBezier",
+        "$value": [0, 0, 0, 1],
+        "$description": "Soft entrance that feels ready and reliable rather than bouncy."
+      },
+      "exit": {
+        "$type": "cubicBezier",
+        "$value": [0.4, 0, 1, 1],
+        "$description": "Quick exit for panels, helper tips, and transient feedback."
+      },
+      "gentleSpring": {
+        "$type": "cubicBezier",
+        "$value": [0.18, 0.9, 0.22, 1],
+        "$description": "Restrained mascot and sticker motion. Avoid high-bounce cartoon behavior."
+      }
+    },
+    "pattern": {
+      "goggleGlint": {
+        "$type": "motion",
+        "$value": {
+          "duration": "{motion.duration.ambient}",
+          "easing": "{motion.easing.standard}",
+          "opacity": [0.18, 0.72, 0.18],
+          "translateX": ["-6%", "6%", "-6%"]
+        },
+        "$description": "Small Git-green lens glint for loading and active technical states."
+      },
+      "branchPulse": {
+        "$type": "motion",
+        "$value": {
+          "duration": "960ms",
+          "easing": "{motion.easing.standard}",
+          "scale": [1, 1.08, 1],
+          "opacity": [0.64, 1, 0.64]
+        },
+        "$description": "Commit-node pulse for WeGit or merge-success feedback."
+      },
+      "softAppear": {
+        "$type": "motion",
+        "$value": {
+          "duration": "{motion.duration.slow}",
+          "easing": "{motion.easing.enter}",
+          "opacity": [0, 1],
+          "translateY": ["8px", "0px"]
+        },
+        "$description": "Default entry for Redy illustrations, cards, banners, and empty states."
+      },
+      "tinyWave": {
+        "$type": "motion",
+        "$value": {
+          "duration": "720ms",
+          "easing": "{motion.easing.gentleSpring}",
+          "rotate": ["0deg", "8deg", "-3deg", "0deg"]
+        },
+        "$description": "Small hello gesture for the Q-version mascot and onboarding moments."
+      }
+    },
+    "accessibility": {
+      "reducedMotion": {
+        "$type": "boolean",
+        "$value": true,
+        "$description": "All decorative loops must pause or collapse to a single opacity change when prefers-reduced-motion is enabled."
+      },
+      "maxDecorativeLoopCount": {
+        "$type": "number",
+        "$value": 3,
+        "$description": "Decorative loops should stop after three cycles unless they represent an active loading state."
+      }
+    }
+  }
+}

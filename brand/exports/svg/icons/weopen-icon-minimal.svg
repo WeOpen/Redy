@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title desc">
+  <title id="title">WeOpen Minimal Icon</title>
+  <desc id="desc">Minimal rounded tile with platform dashboard, sidebar, and module cards.</desc>
+  <g transform="translate(18 18) scale(.72)" data-fit="png-reference">
+  <rect x="10" y="10" width="108" height="108" rx="25" fill="#F8F5F0" stroke="#8B6E54" stroke-width="3"/>
+  <rect x="17" y="17" width="94" height="94" rx="21" fill="none" stroke="#F6F1E9" stroke-width="4"/>
+  <rect x="28" y="31" width="72" height="68" rx="12" fill="#F6F1E9" stroke="#8B6E54" stroke-width="4"/>
+  <path d="M28 47h72" stroke="#8B6E54" stroke-width="3"/>
+  <path d="M37 47h54" stroke="#2D2A2E" stroke-width="2" stroke-linecap="round" opacity=".25"/>
+  <circle cx="41" cy="39" r="3" fill="#C14B30"/>
+  <circle cx="52" cy="39" r="3" fill="#F2C85F"/>
+  <circle cx="63" cy="39" r="3" fill="#2CC68E"/>
+  <rect x="35" y="54" width="16" height="36" rx="4" fill="#F0E6D6" stroke="#D1B892" stroke-width="2.5"/>
+  <path d="M40 63h5M40 73h5M40 83h5" stroke="#CDBA9E" stroke-width="3" stroke-linecap="round"/>
+  <rect x="58" y="55" width="24" height="18" rx="4" fill="#E9DED1" stroke="#D1B892" stroke-width="2.5"/>
+  <path d="M62 65c4-4 7 0 11-4 3-2 4-1 6-3" fill="none" stroke="#9EB8BE" stroke-width="3" stroke-linecap="round"/>
+  <rect x="87" y="55" width="10" height="18" rx="4" fill="#E9DED1" stroke="#D1B892" stroke-width="2.5"/>
+  <circle cx="92" cy="64" r="4" fill="none" stroke="#CDBA9E" stroke-width="3"/>
+  <rect x="58" y="80" width="39" height="10" rx="4" fill="#F6F1E9" stroke="#D1B892" stroke-width="2.5"/>
+  <path d="M65 85h21" stroke="#C14B30" stroke-width="3.5" stroke-linecap="round"/>
+  </g>
+</svg>
