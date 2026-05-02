@@ -70,7 +70,8 @@ describe('HomePage', () => {
 
     expect(screen.getByAltText(/Redy Logo Lockup/i)).toBeInTheDocument();
     expect(screen.getByAltText(/Redy GitHub Header 主视觉/i)).toBeInTheDocument();
-    expect(screen.getByAltText(/Redy 标准立绘/i)).toBeInTheDocument();
+    expect(screen.getByAltText(/Redy 社区贴纸/i)).toBeInTheDocument();
+    expect(screen.getByAltText(/Redy 表情包/i)).toBeInTheDocument();
     expect(screen.getByText(/温和看待技术，严谨对待代码/i)).toBeInTheDocument();
     expect(screen.getByRole('link', { name: /打开 WeMail 项目/i })).toHaveAttribute(
       'href',
@@ -89,6 +90,15 @@ describe('HomePage', () => {
     expect(container.querySelector('.hero__asset-strip')).not.toBeNull();
     expect(screen.queryByText(/临时邮箱与轻量通信入口/i)).not.toBeInTheDocument();
     expect(screen.queryByText(/Git 协作与版本演化工具/i)).not.toBeInTheDocument();
+  });
+
+  it('shows sticker and expression pack previews in the visual gallery', () => {
+    render(<HomePage />);
+
+    expect(screen.getByText('社区贴纸')).toBeInTheDocument();
+    expect(screen.getByText('表情包')).toBeInTheDocument();
+    expect(screen.queryByText('标准立绘')).not.toBeInTheDocument();
+    expect(screen.queryByText('轻量化形态')).not.toBeInTheDocument();
   });
 
   it('connects the phase 4 homepage hero to GitHub and README visual assets', () => {

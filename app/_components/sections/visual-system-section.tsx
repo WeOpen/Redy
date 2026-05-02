@@ -22,13 +22,13 @@ export default function VisualSystemSection() {
           <MotionFigure className="card-surface image-card reveal-card">
             {/* 光晕只承担视觉层次，不进入可访问名称。 */}
             <span className="image-card__halo" aria-hidden="true" />
-            <img alt="Redy 标准立绘" src={homeImages.standardMascot} />
-            <figcaption>标准立绘</figcaption>
+            <img alt="Redy 社区贴纸" src={homeImages.standardMascot} />
+            <figcaption>社区贴纸</figcaption>
           </MotionFigure>
           <MotionFigure className="card-surface image-card reveal-card" delay={0.08}>
             <span className="image-card__halo" aria-hidden="true" />
-            <img alt="Redy 轻量化形态" src={homeImages.chibiMascot} />
-            <figcaption>轻量化形态</figcaption>
+            <img alt="Redy 表情包" src={homeImages.chibiMascot} />
+            <figcaption>表情包</figcaption>
           </MotionFigure>
         </div>
         <div className="visual-copy">
