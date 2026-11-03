@@ -1,6 +1,9 @@
 // Web App Manifest 描述安装入口、主题色和 PWA 图标族。
 import type { MetadataRoute } from 'next';
 
+// GitHub Pages 使用 output: 'export'，Web App Manifest 必须预渲染为静态路由。
+export const dynamic = 'force-static';
+
 /**
  * 生成 Redy 站点的安装元数据，供浏览器和移动设备读取。
  */
