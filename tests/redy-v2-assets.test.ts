@@ -7,12 +7,13 @@ const assetRoot = path.join(process.cwd(), 'brand/mascot/v2');
 
 const source = 'source/redy-2-portrait-reference.png';
 const vector = 'redy-2-portrait-bezier-v13.svg';
+const vectorV14 = 'redy-2-portrait-bezier-v14.svg';
 const rendered = 'previews/redy-2-svg-preview-v13.png';
 const comparison = 'previews/redy-2-reference-v13-comparison.png';
 
 describe('Redy 2.0 portrait assets', () => {
   it('contains each uploaded source, vector and QA image', () => {
-    for (const relativePath of [source, vector, rendered, comparison]) {
+    for (const relativePath of [source, vector, vectorV14, rendered, comparison]) {
       expect(statSync(path.join(assetRoot, relativePath)).size).toBeGreaterThan(100);
     }
   });
@@ -40,4 +41,20 @@ describe('Redy 2.0 portrait assets', () => {
     expect(svg).not.toMatch(/<script\b/i);
     expect(svg).not.toMatch(/<foreignObject\b/i);
   });
+  
+  it('keeps the V14 portrait as editable Bézier geometry without embedded raster', () => {
+    const svg = readFileSync(path.join(assetRoot, vectorV14), 'utf8');
+
+    expect(svg).toContain('viewBox="0 0 1248 1248"');
+    expect(svg).toMatch(/<title\b/);
+    expect(svg).toMatch(/<desc\b/);
+    expect(svg).toContain('id="goggle-left"');
+    expect(svg).toContain('id="goggle-right"');
+    expect(svg).toContain('id="mouth-expressive"');
+    expect(svg).toContain('<radialGradient');
+    expect(svg).toMatch(/<path\b/);
+    expect(svg).not.toMatch(/<image\b/i);
+    expect(svg).not.toMatch(/data:image\//i);
+  });
+
 });
