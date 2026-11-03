@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+<title id="title">Redy 2.0 simplified mascot icon</title><desc id="desc">Friendly rust-red panda with blue explorer goggles, cream cheeks and a Git scarf.</desc>
+<g stroke="#543026" stroke-width="9" stroke-linecap="round" stroke-linejoin="round">
+<path d="M116 198 Q60 111 102 76 Q148 54 191 132 M396 198 Q452 111 410 76 Q364 54 321 132" fill="#D24B31"/>
+<path d="M126 161 Q100 116 120 106 Q145 100 165 144 M386 161 Q412 116 392 106 Q367 100 347 144" fill="#F6EDE3" stroke-width="5"/>
+<path d="M198 96 Q194 53 229 37 Q221 71 242 77 Q247 38 281 27 Q267 69 266 81 Q293 58 319 65 Q300 94 288 111" fill="#D24B31"/>
+<path d="M78 260 C78 146 145 103 256 103 C367 103 434 146 434 260 C434 367 365 424 256 424 C147 424 78 367 78 260Z" fill="#D24B31"/>
+<path d="M90 250 Q111 205 151 205 Q193 207 213 268 Q182 320 132 316 Q96 305 90 250Z M422 250 Q401 205 361 205 Q319 207 299 268 Q330 320 380 316 Q416 305 422 250Z" fill="#F6EDE3" stroke="none"/>
+<path d="M178 295 Q208 260 256 274 Q304 260 334 295 Q351 356 304 377 Q256 398 208 377 Q161 356 178 295Z" fill="#F6EDE3" stroke="none"/>
+<ellipse cx="194" cy="258" rx="17" ry="22" fill="#2D2A2E" stroke="none"/><ellipse cx="318" cy="258" rx="17" ry="22" fill="#2D2A2E" stroke="none"/>
+<circle cx="199" cy="250" r="6" fill="white" stroke="none"/><circle cx="323" cy="250" r="6" fill="white" stroke="none"/>
+<path d="M241 308 Q256 299 271 308 Q266 322 256 324 Q246 322 241 308Z" fill="#543026" stroke="none"/>
+<path d="M256 324 V337 M256 337 Q241 350 226 338 M256 337 Q271 350 286 338" fill="none" stroke-width="6"/>
+<path d="M126 176 Q256 139 386 176" fill="none" stroke="#543026" stroke-width="20"/>
+<g transform="rotate(-11 194 164)"><rect x="132" y="131" width="124" height="77" rx="37" fill="#B87B42"/><rect x="146" y="144" width="96" height="51" rx="25" fill="#76C9E8" stroke-width="5"/><path d="M165 157 L191 149" stroke="#E8FCFF" stroke-width="7"/></g>
+<g transform="rotate(11 318 164)"><rect x="256" y="131" width="124" height="77" rx="37" fill="#B87B42"/><rect x="270" y="144" width="96" height="51" rx="25" fill="#76C9E8" stroke-width="5"/><path d="M290 157 L316 149" stroke="#E8FCFF" stroke-width="7"/></g>
+<path d="M144 395 Q256 430 368 395 L345 468 Q256 488 167 468Z" fill="#C63D2C"/>
+<g fill="none" stroke="#F6EDE3" stroke-width="10"><path d="M256 432 V457 M256 440 L235 430 M256 450 L278 440"/><circle cx="256" cy="429" r="5" fill="#F6EDE3"/><circle cx="232" cy="429" r="5" fill="#F6EDE3"/><circle cx="281" cy="438" r="5" fill="#F6EDE3"/></g>
+</g></svg>
