@@ -1194,6 +1194,27 @@ img {
   gap: 16px;
 }
 
+/* 候选资产状态提示与 SVG 资源链接使用现有品牌色，不干扰正式角色卡。 */
+.visual-gallery__notice {
+  margin: 0;
+  padding: 8px 14px;
+  border-left: 3px solid var(--primary);
+  color: var(--muted);
+  font-size: 0.88rem;
+  line-height: 1.6;
+}
+
+.visual-gallery .image-card figcaption a {
+  color: var(--primary-deep);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.visual-gallery .image-card figcaption a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+}
+
 .image-card {
   position: relative;
   overflow: hidden;
