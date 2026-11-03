@@ -1,22 +1,23 @@
-# Redy 2.0 — SVG master candidate review
+# Redy 2.0 · Portrait assets
 
-## First vector candidate
+The Redy 2.0 head portrait is being reconstructed from the individually generated PNG reference. This directory stores the reference, vector candidate and visual QA exports together.
 
-- `brand/mascot/v2/redy-head-mark.svg`
-- Purpose: simplified face icon for a small-size brand mark.
-- Format: authored vector shapes with accessible title and description; transparent canvas and 512 × 512 viewBox.
-- Colors: rust `#D24B31`, cream `#F6EDE3`, charcoal `#2D2A2E`, warm brown `#B87B42`, sky blue `#76C9E8`, scarf `#C63D2C`.
-- Status: **candidate, not approved master**. Must render and inspect before replacement.
+| Asset | File | Purpose |
+| --- | --- | --- |
+| Source portrait | `source/redy-2-portrait-reference.png` | Fixed visual reference |
+| SVG V13 | `redy-2-portrait-bezier-v13.svg` | Editable Bézier and gradient candidate |
+| SVG preview | `previews/redy-2-svg-preview-v13.png` | Rendered appearance of SVG |
+| Comparison | `previews/redy-2-reference-v13-comparison.png` | Before/after QA |
 
-## Required visual QA
+**Status: V13 candidate, not final brand master.** Earlier automated tracing introduced artifacts; V13 prioritizes clean scalable Bézier paths. The geometry and highlights still differ from the reference.
 
-1. Render at 512, 128, 64, 32 and 16 px.
-2. Check for clipping, unintended overlaps, legible eyes and goggles, facial symmetry, Git symbol legibility and transparent edges.
-3. Review alongside existing 1.0 avatar and selected B+C concept sheet.
-4. Confirm the visual language is consistent with full-body and three-view art, rather than treating this icon as an independent character redesign.
-5. Once approved, produce PNG/ICO platform exports from this same master and update active references.
-6. Keep previous production assets until complete QA and merge.
+## Acceptance requirements
 
-## Why not replace production icons yet?
+1. Check rendered V13 beside the PNG at identical crop and size.
+2. Verify ears, three-tuft silhouette, gold/blue goggles, cheek arcs, eye alignment, muzzle and red Git scarf.
+3. Review the actual SVG at 16, 32, 64, 128 and 512 px. Use a separate simplified mark for tiny sizes if necessary.
+4. Check XML validity, accessibility title/description, transparent background and absence of embedded raster.
+5. After visual approval, export and replace app icons, favicon families, logo lockups, website imagery, banners, stickers and brand distribution copies.
+6. Validate builds, tests, light/dark contrast and broken image references before changing this PR from draft.
 
-The concept sheets are raster illustrations containing several characters, captions and scenery. Cropping a character from the board is not equivalent to clean transparent master art. The vector candidate requires actual render inspection and stakeholder approval before it becomes the source of truth.
+See `PORTRAIT-SOURCE.md` for the detailed source-of-truth policy.
