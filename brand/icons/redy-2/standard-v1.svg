@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Redy 2.0 — simplified avatar</title>
+  <desc id="desc">Smiling red panda with a triple flame tuft, blue aviator goggles, cream cheeks and a red Git scarf.</desc>
+  <defs>
+    <linearGradient id="fur" x1="0" y1="0" x2="0.82" y2="1"><stop stop-color="#FF803A"/><stop offset=".62" stop-color="#FF501C"/><stop offset="1" stop-color="#DA3415"/></linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="0.28" y2="1"><stop stop-color="#FFE999"/><stop offset=".46" stop-color="#FFCB35"/><stop offset="1" stop-color="#E88A13"/></linearGradient>
+    <linearGradient id="lens" x1="0" y1="0" x2=".9" y2="1"><stop stop-color="#2369BD"/><stop offset=".55" stop-color="#4BC4EF"/><stop offset="1" stop-color="#93E7FF"/></linearGradient>
+    <linearGradient id="scarf" x1="0" y1="0" x2=".75" y2="1"><stop stop-color="#F04422"/><stop offset=".65" stop-color="#E72B14"/><stop offset="1" stop-color="#B82110"/></linearGradient>
+  </defs>
+  <!-- The avatar is transparent with a compact outer silhouette; no raster embedded. -->
+  <g stroke="#682711" stroke-width="8" stroke-linejoin="round" stroke-linecap="round">
+    <!-- distinctive three-point forelock -->
+    <path d="M197 126 C186 94 192 62 213 44 C216 73 231 84 239 89 C254 47 298 24 352 24 C328 47 315 68 311 83 C340 65 370 68 390 80 C365 93 347 109 332 138 Z" fill="url(#fur)"/>
+    <path d="M222 95 C240 61 282 42 321 39" fill="none" stroke="#FFB46E" stroke-width="8" opacity=".6"/>
+    <!-- enlarged white ears with orange inner ear -->
+    <path d="M162 159 C115 103 76 91 49 112 C27 132 31 206 73 270 L155 267Z" fill="#FFF2DF"/>
+    <path d="M350 159 C397 103 436 91 463 112 C485 132 481 206 439 270 L357 267Z" fill="#FFF2DF"/>
+    <path d="M137 178 C96 139 74 137 65 156 C57 176 69 210 91 241 L157 230Z" fill="#F36D35" stroke="none"/>
+    <path d="M375 178 C416 139 438 137 447 156 C455 176 443 210 421 241 L355 230Z" fill="#F36D35" stroke="none"/>
+    <!-- solid head shape, broad cheek silhouette, clear at 32px -->
+    <path d="M84 234 C76 168 132 121 217 119 C308 98 385 125 419 188 C450 240 450 320 412 354 C386 383 325 399 256 401 C184 401 120 387 92 357 C60 324 58 272 84 234Z" fill="url(#fur)"/>
+    <!-- small outward hair points -->
+    <path d="M84 254 L54 242 L69 279 L51 300 L91 315Z" fill="#EA3F17" stroke-width="5"/>
+    <path d="M428 254 L458 242 L443 279 L461 300 L421 315Z" fill="#EA3F17" stroke-width="5"/>
+    <!-- brown leather band with folded central bridge -->
+    <path d="M87 236 C105 194 130 168 158 150 L191 170 C151 206 136 252 133 294 L90 299Z" fill="#7C4228"/>
+    <path d="M425 236 C407 194 382 168 354 150 L321 170 C361 206 376 252 379 294 L422 299Z" fill="#7C4228"/>
+    <path d="M230 139 C248 132 267 132 282 139 L286 190 C268 185 246 185 228 190Z" fill="#7C4228"/>
+    <!-- forehead goggles, two warm gold frames and blue lenses -->
+    <g transform="rotate(-14 171 172)">
+      <ellipse cx="171" cy="177" rx="88" ry="54" fill="#62331D"/>
+      <ellipse cx="171" cy="168" rx="85" ry="50" fill="url(#gold)" stroke="#75340F" stroke-width="6"/>
+      <ellipse cx="171" cy="168" rx="67" ry="36" fill="url(#lens)" stroke="#6B3B22" stroke-width="6"/>
+      <path d="M117 161 Q143 133 184 137 L143 171Z" fill="#FFFFFF" stroke="none" opacity=".86"/>
+    </g>
+    <g transform="rotate(14 341 172)">
+      <ellipse cx="341" cy="177" rx="88" ry="54" fill="#62331D"/>
+      <ellipse cx="341" cy="168" rx="85" ry="50" fill="url(#gold)" stroke="#75340F" stroke-width="6"/>
+      <ellipse cx="341" cy="168" rx="67" ry="36" fill="url(#lens)" stroke="#6B3B22" stroke-width="6"/>
+      <path d="M287 161 Q313 133 354 137 L313 171Z" fill="#FFFFFF" stroke="none" opacity=".86"/>
+    </g>
+    <!-- cheerful eyebrow patches, high contrast eyes -->
+    <ellipse cx="197" cy="232" rx="22" ry="12" fill="#FFF7EA" stroke="none"/>
+    <ellipse cx="315" cy="232" rx="22" ry="12" fill="#FFF7EA" stroke="none"/>
+    <ellipse cx="199" cy="275" rx="29" ry="38" fill="#31170F" stroke="none"/>
+    <ellipse cx="313" cy="275" rx="29" ry="38" fill="#31170F" stroke="none"/>
+    <circle cx="209" cy="259" r="10" fill="#FFFFFF" stroke="none"/>
+    <circle cx="323" cy="259" r="10" fill="#FFFFFF" stroke="none"/>
+    <!-- paired cream crescent cheeks + orange inner mask -->
+    <path d="M91 314 C109 269 160 266 198 300 C208 333 186 368 151 370 C117 371 96 351 91 314Z" fill="#FFF1DE" stroke="none"/>
+    <path d="M421 314 C403 269 352 266 314 300 C304 333 326 368 361 370 C395 371 416 351 421 314Z" fill="#FFF1DE" stroke="none"/>
+    <path d="M151 302 C176 293 195 303 203 322 C194 347 174 353 153 347 C138 336 139 313 151 302Z" fill="#F25027" stroke="none"/>
+    <path d="M361 302 C336 293 317 303 309 322 C318 347 338 353 359 347 C374 336 373 313 361 302Z" fill="#F25027" stroke="none"/>
+    <!-- muzzle and triangular nose -->
+    <path d="M190 329 C197 300 228 287 256 289 C284 287 315 300 322 329 C328 364 292 380 256 380 C220 380 184 364 190 329Z" fill="#FFF5E8" stroke="none"/>
+    <path d="M242 315 Q256 306 270 315 Q269 326 256 330 Q243 326 242 315Z" fill="#4A2419" stroke="none"/>
+    <path d="M256 331 C241 344 229 338 224 333 C230 357 243 368 256 368 C269 368 282 357 288 333 C283 338 271 344 256 331Z" fill="#652517" stroke="none"/>
+    <path d="M240 348 Q255 337 272 348 Q266 361 256 362 Q246 361 240 348Z" fill="#FF7772" stroke="none"/>
+    <!-- scarf: paired folds and clear white Git branch -->
+    <path d="M133 380 Q185 393 256 393 Q326 393 379 380 Q398 395 382 412 L395 428 Q327 479 256 492 Q180 471 117 428 L130 410 Q113 393 133 380Z" fill="url(#scarf)"/>
+    <path d="M139 403 Q194 425 256 427 Q321 427 371 403" fill="none" stroke="#FF6B3E" stroke-width="8" opacity=".65"/>
+    <path d="M247 438 V472 L280 450" stroke="#FFFFFF" stroke-width="10" fill="none"/>
+    <circle cx="247" cy="436" r="7" fill="url(#scarf)" stroke="#FFFFFF" stroke-width="7"/>
+    <circle cx="247" cy="472" r="7" fill="url(#scarf)" stroke="#FFFFFF" stroke-width="7"/>
+    <circle cx="282" cy="449" r="7" fill="url(#scarf)" stroke="#FFFFFF" stroke-width="7"/>
+  </g>
+</svg>

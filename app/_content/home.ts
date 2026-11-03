@@ -1,6 +1,8 @@
 // 首页内容层集中维护静态资源和品牌文案，避免页面入口承担数据职责。
-import communityStickerPack from '../../brand/stickers/redy-community-sticker-pack-v1.png';
-import expressionPack from '../../brand/stickers/expressions/redy-expression-pack-v1.png';
+import portraitReference from '../../brand/mascot/v2/source/redy-2-portrait-reference.png';
+import portraitVectorPreview from '../../brand/mascot/v2/previews/redy-2-svg-preview-v13.png';
+import standardMascot from '../../brand/mascot/standard/redy-full-body.png';
+import chibiMascot from '../../brand/mascot/chibi/redy-chibi.png';
 import logoLockup from '../../brand/logo/redy-logo-lockup-transparent.png';
 import iconPrimary from '../../brand/icons/redy-icon-primary.png';
 import wegitIcon from '../../brand/icons/wegit-icon-minimal.png';
@@ -40,8 +42,10 @@ export const projectLinks = [
 
 // 页面区块统一消费 src 字符串，避免每个区块重复导入品牌图片。
 export const homeImages = {
-  standardMascot: communityStickerPack.src,
-  chibiMascot: expressionPack.src,
+  portraitReference: portraitReference.src,
+  portraitVectorPreview: portraitVectorPreview.src,
+  standardMascot: standardMascot.src,
+  chibiMascot: chibiMascot.src,
   logoLockup: logoLockup.src,
   iconPrimary: iconPrimary.src,
   githubHeader: githubHeader.src,
@@ -78,7 +82,7 @@ export const valuePairs = [
 export const visualItems = [
   {
     title: '识别形态',
-    body: '由 Logo / Icon、社区贴纸、表情包与园丁场景组成，覆盖社群传播、文档配图、反馈提示和官网主视觉。',
+    body: '由 Logo / Icon、标准立绘、Q 版、表情包与园丁场景组成，覆盖社群传播、文档配图、反馈提示和官网主视觉。',
   },
   {
     title: '标志性特征',

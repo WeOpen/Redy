@@ -19,16 +19,40 @@ export default function VisualSystemSection() {
       </div>
       <div className="visual-layout">
         <div className="visual-gallery">
+          {/* V2 候选稿并排展示，便于在完成正式替换前对照原画与矢量渲染。 */}
+          <MotionFigure className="card-surface image-card reveal-card">
+            <span className="image-card__halo" aria-hidden="true" />
+            <img alt="Redy 2.0 原始头像 PNG" src={homeImages.portraitReference} />
+            <figcaption>Redy 2.0 · 原始头像参考</figcaption>
+          </MotionFigure>
+          <MotionFigure className="card-surface image-card reveal-card" delay={0.06}>
+            <span className="image-card__halo" aria-hidden="true" />
+            <img alt="Redy 2.0 V13 SVG 矢量渲染预览" src={homeImages.portraitVectorPreview} />
+            <figcaption>
+              Redy 2.0 · SVG V13 候选稿（
+              <a
+                href="https://github.com/WeOpen/Redy/blob/feat/redy-2-brand-refresh/brand/mascot/v2/redy-2-portrait-bezier-v13.svg"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                查看 SVG 源文件
+              </a>
+              ）
+            </figcaption>
+          </MotionFigure>
+          <p className="visual-gallery__notice">
+            以下旧版全身与 Q 版立绘暂作对照；V13 尚未通过正式品牌母版验收。
+          </p>
           <MotionFigure className="card-surface image-card reveal-card">
             {/* 光晕只承担视觉层次，不进入可访问名称。 */}
             <span className="image-card__halo" aria-hidden="true" />
-            <img alt="Redy 社区贴纸" src={homeImages.standardMascot} />
-            <figcaption>社区贴纸</figcaption>
+            <img alt="Redy 1.0 标准角色立绘" src={homeImages.standardMascot} />
+            <figcaption>1.0 标准角色 · 待替换</figcaption>
           </MotionFigure>
           <MotionFigure className="card-surface image-card reveal-card" delay={0.08}>
             <span className="image-card__halo" aria-hidden="true" />
-            <img alt="Redy 表情包" src={homeImages.chibiMascot} />
-            <figcaption>表情包</figcaption>
+            <img alt="Redy 1.0 Q 版角色" src={homeImages.chibiMascot} />
+            <figcaption>1.0 Q 版角色 · 待替换</figcaption>
           </MotionFigure>
         </div>
         <div className="visual-copy">

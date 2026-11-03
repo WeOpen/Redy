@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
+  <title id="title">Redy 2.0 — micro icon</title>
+  <desc id="desc">Red panda face, blue goggles and cream cheeks, simplified for 16px favicons.</desc>
+  <!-- Designed specifically for 16–32px. Solid flat fills, no fine Git branch or embedded bitmap. -->
+  <path d="M20 17 C15 10 8 9 5 13 C2 17 5 28 11 31 L20 27Z M44 17 C49 10 56 9 59 13 C62 17 59 28 53 31 L44 27Z" fill="#FFF1DB" stroke="#7C2E16" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M10 20 Q12 15 16 20 L15 28 L11 27Z M54 20 Q52 15 48 20 L49 28 L53 27Z" fill="#F47939"/>
+  <path d="M25 13 L23 7 L29 10 Q32 3 42 3 L37 10 Q43 8 47 11 L41 17Z" fill="#F35124" stroke="#7C2E16" stroke-width="1.6" stroke-linejoin="round"/>
+  <path d="M7 32 C7 17 20 14 32 14 C44 14 57 17 57 32 C57 45 48 51 32 51 C16 51 7 45 7 32Z" fill="#F45B26" stroke="#7C2E16" stroke-width="2"/>
+  <path d="M8 37 Q12 30 21 34 L26 44 Q14 49 8 42Z M56 37 Q52 30 43 34 L38 44 Q50 49 56 42Z" fill="#FFF1DD"/>
+  <path d="M18 37 Q22 35 25 40 Q21 44 17 42Z M46 37 Q42 35 39 40 Q43 44 47 42Z" fill="#F35124"/>
+  <path d="M14 21 Q32 14 50 21" fill="none" stroke="#693722" stroke-width="5"/>
+  <g fill="#FFD44E" stroke="#6C361C" stroke-width="1.4">
+    <ellipse cx="22" cy="23" rx="13" ry="7" transform="rotate(-15 22 23)"/>
+    <ellipse cx="42" cy="23" rx="13" ry="7" transform="rotate(15 42 23)"/>
+  </g>
+  <g fill="#36AFE5"><ellipse cx="22" cy="23" rx="9.5" ry="4.6" transform="rotate(-15 22 23)"/><ellipse cx="42" cy="23" rx="9.5" ry="4.6" transform="rotate(15 42 23)"/></g>
+  <g fill="#FFFFFF"><ellipse cx="19" cy="21" rx="4" ry="1.8" transform="rotate(-15 19 21)"/><ellipse cx="39" cy="21" rx="4" ry="1.8" transform="rotate(15 39 21)"/></g>
+  <ellipse cx="23" cy="35" rx="3" ry="4" fill="#341810"/><ellipse cx="41" cy="35" rx="3" ry="4" fill="#341810"/>
+  <path d="M25 42 Q32 37 39 42 Q42 48 32 49 Q22 48 25 42Z" fill="#FFF4E6"/>
+  <path d="M29 42 Q32 40 35 42 L32 45Z" fill="#54251A"/><path d="M29 46 Q32 50 35 46Z" fill="#7D2D23"/>
+  <path d="M17 49 Q32 54 47 49 L42 61 Q32 64 22 61Z" fill="#E8331B" stroke="#8A261A" stroke-width="1.5"/>
+</svg>

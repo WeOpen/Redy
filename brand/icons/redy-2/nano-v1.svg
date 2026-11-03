@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-labelledby="title desc">
+  <title id="title">Redy 2.0 — 16px favicon</title>
+  <desc id="desc">Micro red panda mascot emblem with two blue goggles and cream cheeks.</desc>
+  <!-- Single-color areas deliberately optimized for 16px readability. -->
+  <path d="M8 13 C5 7 2 8 2.5 13 L5 18 L9 17Z M24 13 C27 7 30 8 29.5 13 L27 18 L23 17Z" fill="#FFF0DC" stroke="#7C2E18" stroke-width="1.8" stroke-linejoin="round"/>
+  <path d="M12 8 L13 3 L16 7 Q19 2 24 3 L21 8 Q24 7 26 9 L21 12Z" fill="#F35124"/>
+  <path d="M3.5 17 C3.5 9 10 7.5 16 7.5 C22 7.5 28.5 9 28.5 17 C28.5 25 24 27 16 27 C8 27 3.5 25 3.5 17Z" fill="#F45122" stroke="#7C2E18" stroke-width="1.8"/>
+  <path d="M5 20 Q8 17 13 21 L13 24 Q7 26 5 23Z M27 20 Q24 17 19 21 L19 24 Q25 26 27 23Z" fill="#FFF1DF"/>
+  <rect x="6.3" y="9.7" width="10.3" height="6.3" rx="3.1" fill="#FFD24B" stroke="#7C2E18" stroke-width="1.3" transform="rotate(-10 11.45 12.85)"/>
+  <rect x="15.4" y="9.7" width="10.3" height="6.3" rx="3.1" fill="#FFD24B" stroke="#7C2E18" stroke-width="1.3" transform="rotate(10 20.55 12.85)"/>
+  <ellipse cx="11.6" cy="12.7" rx="3.7" ry="1.8" fill="#39B9EC" transform="rotate(-10 11.6 12.7)"/>
+  <ellipse cx="20.4" cy="12.7" rx="3.7" ry="1.8" fill="#39B9EC" transform="rotate(10 20.4 12.7)"/>
+  <circle cx="11.2" cy="19.8" r="1.5" fill="#34150E"/><circle cx="20.8" cy="19.8" r="1.5" fill="#34150E"/>
+  <path d="M12.5 23 C13 21 19 21 19.5 23 C19 25.5 13 25.5 12.5 23Z" fill="#FFF7EB"/><path d="M14.7 22.3 L17.3 22.3 L16 24Z" fill="#492117"/>
+  <path d="M8 26 Q16 29 24 26 L22.5 31 Q16 32 9.5 31Z" fill="#D92F1B"/>
+</svg>
