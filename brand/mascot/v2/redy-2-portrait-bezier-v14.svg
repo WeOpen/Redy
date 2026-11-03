@@ -1,0 +1,163 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1248 1248" role="img" aria-labelledby="title desc">
+<title id="title">Redy 2.0 portrait — Bézier reconstruction V14 — approved portrait candidate geometry</title>
+<desc id="desc">Editable vector head portrait with structured Bézier geometry, light/shadow and metallic lens detailing; traced from the independent portrait template. No embedded raster.</desc>
+<defs>
+ <linearGradient id="fur" x1=".2" y1="0" x2=".7" y2="1"><stop stop-color="#ff7131"/><stop offset=".52" stop-color="#ff4813"/><stop offset="1" stop-color="#dc2d09"/></linearGradient>
+ <radialGradient id="face"><stop stop-color="#ffac5b"/><stop offset=".65" stop-color="#ff782e"/><stop offset="1" stop-color="#ed4311"/></radialGradient>
+ <linearGradient id="cream" x1="0" y1="0" x2=".8" y2="1"><stop stop-color="#fffefa"/><stop offset=".7" stop-color="#fff0dc"/><stop offset="1" stop-color="#f3caa5"/></linearGradient>
+ <linearGradient id="gold" x1="0" y1="0" x2=".3" y2="1"><stop stop-color="#fff9a1"/><stop offset=".25" stop-color="#ffdf48"/><stop offset=".55" stop-color="#ffae08"/><stop offset=".85" stop-color="#e17808"/><stop offset="1" stop-color="#a54b0b"/></linearGradient>
+ <linearGradient id="glass" x1="0" y1="0" x2=".8" y2="1"><stop stop-color="#123e86"/><stop offset=".32" stop-color="#2f89d7"/><stop offset=".7" stop-color="#53c5f7"/><stop offset="1" stop-color="#8deafa"/></linearGradient>
+ <linearGradient id="leather" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#9e4e25"/><stop offset=".45" stop-color="#60301d"/><stop offset="1" stop-color="#3b1b13"/></linearGradient>
+ <linearGradient id="scarf" x1="0" y1="0" x2=".8" y2="1"><stop stop-color="#ff481d"/><stop offset=".6" stop-color="#ee260a"/><stop offset="1" stop-color="#b91b0a"/></linearGradient>
+ <radialGradient id="eye" cx=".6" cy=".7" r=".8"><stop stop-color="#98501d"/><stop offset=".45" stop-color="#3c160b"/><stop offset="1" stop-color="#170b09"/></radialGradient>
+<linearGradient id="lensSheen" x1="0" y1="0" x2=".8" y2="1"><stop stop-color="#fff" stop-opacity=".9"/><stop offset=".45" stop-color="#b7f7ff" stop-opacity=".38"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+<radialGradient id="cheekGlow" cx=".3" cy=".25" r=".85"><stop stop-color="#ffb67b" stop-opacity=".65"/><stop offset="1" stop-color="#ffb67b" stop-opacity="0"/></radialGradient>
+<linearGradient id="earLight" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fffefa"/><stop offset=".65" stop-color="#fff0db"/><stop offset="1" stop-color="#f4c49a"/></linearGradient>
+<radialGradient id="warmFace" cx=".48" cy=".40" r=".72"><stop offset="0" stop-color="#ffbd75" stop-opacity=".46"/><stop offset=".66" stop-color="#ffae60" stop-opacity=".18"/><stop offset="1" stop-color="#ff7e3e" stop-opacity="0"/></radialGradient>
+<linearGradient id="scarfrim" x1="0" y1="0" x2=".65" y2="1"><stop stop-color="#ff7c38" stop-opacity=".7"/><stop offset=".75" stop-color="#f73516" stop-opacity=".12"/><stop offset="1" stop-color="#a71a10" stop-opacity=".55"/></linearGradient>
+<linearGradient id="lensFacet" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#dff9fe" stop-opacity=".88"/><stop offset=".4" stop-color="#96eafa" stop-opacity=".18"/><stop offset="1" stop-color="#0b76bd" stop-opacity=".1"/></linearGradient>
+</defs>
+<g id="redy-portrait-main" stroke="#741b09" stroke-linecap="round" stroke-linejoin="round">
+<!-- ears, layered interiors -->
+<path d="M109 497 C61 341 82 209 169 178 C249 144 356 176 463 267 L390 554 Z" fill="url(#earLight)" stroke-width="18"/>
+<path d="M1139 497 C1187 341 1166 209 1079 178 C999 144 892 176 785 267 L858 554 Z" fill="url(#earLight)" stroke-width="18"/>
+<path d="M181 470 C167 358 179 266 237 256 C302 250 355 324 376 416 L308 536 Z" fill="#f9793a" stroke="none"/>
+<path d="M1067 470 C1081 358 1069 266 1011 256 C946 250 893 324 872 416 L940 536 Z" fill="#f9793a" stroke="none"/>
+<path d="M225 446 C218 358 232 306 271 294 C311 309 334 347 343 406 C292 382 263 395 225 446Z" fill="#d84313" opacity=".65" stroke="none"/>
+<path d="M1023 446 C1030 358 1016 306 977 294 C937 309 914 347 905 406 C956 382 985 395 1023 446Z" fill="#d84313" opacity=".65" stroke="none"/>
+<!-- ear internal soft reflected light -->
+<path d="M157 283 Q183 222 238 211" fill="none" stroke="#fffaf0" stroke-width="13" opacity=".43"/>
+<path d="M1091 283 Q1065 222 1010 211" fill="none" stroke="#fffaf0" stroke-width="13" opacity=".43"/>
+<!-- extra warm inner-ear volume, preserving the cream perimeter -->
+<path d="M210 366 C212 311 244 287 280 282 Q328 302 338 366 C312 335 261 322 210 366Z" fill="#ffb17b" opacity=".36" stroke="none"/>
+<path d="M1038 366 C1036 311 1004 287 968 282 Q920 302 910 366 C936 335 987 322 1038 366Z" fill="#ffb17b" opacity=".36" stroke="none"/>
+<!-- forehead tuft behind face -->
+<path d="M442 299 C421 240 426 164 489 112 C482 167 494 181 509 199 C555 92 646 29 792 35 C748 72 711 113 693 157 C750 137 805 133 866 160 C818 187 778 213 741 259 L703 357Z" fill="url(#fur)" stroke-width="17"/>
+<path d="M504 197 C539 116 627 61 737 52 C661 113 632 166 607 228" fill="none" stroke="#ff9b55" stroke-width="20" opacity=".65"/>
+<path d="M690 201 C739 169 789 159 835 164" fill="none" stroke="#ff9b55" stroke-width="14" opacity=".6"/>
+<path d="M561 150 C607 93 673 65 744 51 C675 105 639 156 620 198" fill="none" stroke="#ffbf74" stroke-width="8" opacity=".4"/>
+<!-- outer head -->
+<path d="M151 482 C154 355 268 287 425 271 C551 240 704 244 835 273 C1003 292 1097 392 1090 535 C1112 595 1114 658 1073 730 C1062 833 973 882 830 904 C685 936 529 935 392 906 C234 899 163 839 157 747 C118 670 119 567 151 482Z" fill="url(#face)" stroke-width="20"/>
+<!-- side tufts -->
+<path d="M159 476 L72 482 C79 543 114 571 151 581 L81 624 C105 679 142 689 182 692" fill="url(#fur)" stroke-width="16"/>
+<path d="M1089 476 L1176 482 C1169 543 1134 571 1097 581 L1167 624 C1143 679 1106 689 1066 692" fill="url(#fur)" stroke-width="16"/>
+<!-- goggles strap and brown side bands -->
+<path d="M157 705 C137 584 190 424 282 356 L357 390 C253 487 225 595 217 764Z" fill="url(#leather)" stroke-width="18"/>
+<path d="M1091 705 C1111 584 1058 424 966 356 L891 390 C995 487 1023 595 1031 764Z" fill="url(#leather)" stroke-width="18"/>
+<path d="M180 609 L235 626 M1013 626 L1068 609" fill="none" stroke="#b66e3d" stroke-width="16"/>
+<!-- subtle forehead and side shading, editable vector shapes -->
+<path d="M261 481 C326 417 409 395 470 412 C374 428 322 475 293 535 C267 579 245 631 229 682 C226 588 230 528 261 481Z" fill="#ffb065" opacity=".26" stroke="none"/>
+<path d="M987 481 C922 417 839 395 778 412 C874 428 926 475 955 535 C981 579 1003 631 1019 682 C1022 588 1018 528 987 481Z" fill="#b92a0a" opacity=".16" stroke="none"/>
+<path d="M357 458 C442 412 522 408 599 414 C541 425 469 450 405 501Z" fill="#ffb777" opacity=".26" stroke="none"/>
+<!-- face modeled glows with transparent radial gradients -->
+<ellipse cx="470" cy="578" rx="305" ry="290" fill="url(#warmFace)" stroke="none"/>
+<ellipse cx="778" cy="578" rx="305" ry="290" fill="url(#warmFace)" stroke="none"/>
+<!-- face mask blush / cheek areas -->
+<path d="M174 705 C218 646 288 633 347 649 C382 659 412 685 430 718 C383 687 345 686 307 705 C267 727 239 774 252 816 C216 796 190 764 174 705Z" fill="url(#cream)" stroke="none"/>
+<path d="M1074 705 C1030 646 960 633 901 649 C866 659 836 685 818 718 C865 687 903 686 941 705 C981 727 1009 774 996 816 C1032 796 1058 764 1074 705Z" fill="url(#cream)" stroke="none"/>
+<path d="M309 715 C351 676 392 698 422 724 C438 762 418 811 375 838 C330 831 291 785 309 715Z" fill="#fa4c1b" stroke="none"/>
+<path d="M939 715 C897 676 856 698 826 724 C810 762 830 811 873 838 C918 831 957 785 939 715Z" fill="#fa4c1b" stroke="none"/>
+<!-- cream cheek glints and warm curved cheek shadows -->
+<path d="M186 729 C216 682 268 666 323 681 C267 687 226 715 210 764Z" fill="#fffefa" opacity=".9" stroke="none"/>
+<path d="M1062 729 C1032 682 980 666 925 681 C981 687 1022 715 1038 764Z" fill="#fffefa" opacity=".9" stroke="none"/>
+<path d="M315 807 Q359 847 398 824" fill="none" stroke="#ec3412" stroke-width="12" opacity=".45"/>
+<path d="M933 807 Q889 847 850 824" fill="none" stroke="#ec3412" stroke-width="12" opacity=".45"/>
+<!-- thin cream cheek crescents echoing the reference silhouette -->
+<path d="M207 735 C226 700 259 677 302 671 C267 697 249 739 251 778 C229 767 215 751 207 735Z" fill="#fff9ef" stroke="none" opacity=".95"/>
+<path d="M1041 735 C1022 700 989 677 946 671 C981 697 999 739 997 778 C1019 767 1033 751 1041 735Z" fill="#fff9ef" stroke="none" opacity=".95"/>
+<!-- gentle face bounce lights and layered cheeks -->
+<ellipse cx="365" cy="607" rx="170" ry="115" fill="url(#cheekGlow)" stroke="none" opacity=".30"/>
+<ellipse cx="883" cy="607" rx="170" ry="115" fill="url(#cheekGlow)" stroke="none" opacity=".30"/>
+<path d="M207 722 C231 679 269 659 307 655" fill="none" stroke="#fffaf1" stroke-width="9" opacity=".75"/>
+<path d="M1041 722 C1017 679 979 659 941 655" fill="none" stroke="#fffaf1" stroke-width="9" opacity=".75"/>
+<!-- brow patches -->
+<ellipse cx="511" cy="506" rx="45" ry="27" fill="#fff9e9" stroke="none"/>
+<ellipse cx="737" cy="506" rx="45" ry="27" fill="#fff9e9" stroke="none"/>
+<!-- eyes -->
+<ellipse cx="474" cy="629" rx="62" ry="79" fill="url(#eye)" stroke-width="11"/>
+<ellipse cx="774" cy="629" rx="62" ry="79" fill="url(#eye)" stroke-width="11"/>
+<ellipse cx="495" cy="595" rx="19" ry="24" fill="white" stroke="none"/>
+<ellipse cx="795" cy="595" rx="19" ry="24" fill="white" stroke="none"/>
+<ellipse cx="452" cy="683" rx="13" ry="9" fill="#b96122" opacity=".75" stroke="none"/>
+<ellipse cx="752" cy="683" rx="13" ry="9" fill="#b96122" opacity=".75" stroke="none"/>
+<!-- iris glints -->
+<circle cx="488" cy="587" r="7" fill="#fff" stroke="none" opacity=".8"/>
+<circle cx="788" cy="587" r="7" fill="#fff" stroke="none" opacity=".8"/>
+<!-- subtle amber iris reflection and soft lower-eyelid gleam -->
+<path d="M429 677 Q471 712 516 673" fill="none" stroke="#d67b37" stroke-width="5" opacity=".52"/>
+<path d="M729 677 Q771 712 816 673" fill="none" stroke="#d67b37" stroke-width="5" opacity=".52"/>
+<ellipse cx="508" cy="577" rx="8" ry="10" fill="#ffffff" opacity=".58" stroke="none"/>
+<ellipse cx="808" cy="577" rx="8" ry="10" fill="#ffffff" opacity=".58" stroke="none"/>
+<!-- pupils and reflected light, independent editable shapes -->
+<path d="M425 646 Q428 681 445 694" fill="none" stroke="#cc7b37" stroke-width="8" opacity=".35"/>
+<path d="M725 646 Q728 681 745 694" fill="none" stroke="#cc7b37" stroke-width="8" opacity=".35"/>
+<g transform="translate(37 9) scale(.94 .975)">
+<!-- muzzle: face-level geometry, editable as independent shapes -->
+<path d="M409 749 C440 684 519 637 624 626 C729 637 808 684 839 749 C861 836 771 903 624 911 C477 903 387 836 409 749Z" fill="url(#cream)" stroke="none"/>
+<path d="M583 659 C600 645 648 645 665 659 C680 678 657 696 624 702 C591 696 568 678 583 659Z" fill="#542719" stroke="#37160f" stroke-width="8"/>
+<ellipse cx="608" cy="660" rx="17" ry="7" fill="#fff5d8" opacity=".6" stroke="none"/>
+<g id="mouth-expressive" transform="translate(-106 -60) scale(1.17 1.08)">
+<path d="M624 702 C618 725 587 736 557 714 C567 754 588 818 624 831 C660 818 681 754 691 714 C661 736 630 725 624 702Z" fill="#5b1b13" stroke-width="9"/>
+<path d="M581 771 C604 746 644 746 667 771 C655 805 641 818 624 820 C607 818 593 805 581 771Z" fill="#fa645b" stroke="none"/>
+<path d="M596 784 C617 774 643 774 653 784" fill="none" stroke="#ff9b88" stroke-width="9"/>
+<path d="M604 804 Q625 791 647 804" fill="none" stroke="#e7464a" stroke-width="6" opacity=".6"/>
+</g>
+<!-- muzzle light bounce -->
+<path d="M453 757 C466 713 502 681 545 672" fill="none" stroke="#fffdf5" stroke-width="9" opacity=".36"/>
+<path d="M795 757 C782 713 746 681 703 672" fill="none" stroke="#fffdf5" stroke-width="9" opacity=".36"/>
+</g>
+<!-- scarf layers -->
+<path d="M312 902 C418 922 532 937 624 937 C716 937 830 922 936 902 C967 924 950 961 918 981 C965 1004 955 1042 907 1063 C824 1121 715 1200 618 1233 C516 1195 426 1122 338 1074 C282 1041 274 1004 320 976 C292 956 287 926 312 902Z" fill="url(#scarf)" stroke-width="19"/>
+<path d="M332 960 C453 1006 545 1005 623 1015 C737 1007 842 982 924 957" fill="none" stroke="#ff7139" stroke-width="23" opacity=".55"/>
+<path d="M322 1009 C428 1062 530 1115 620 1193" fill="none" stroke="#b91a0a" stroke-width="18" opacity=".7"/>
+<!-- scarf folded inner edge: layered accent shapes -->
+<path d="M325 942 Q447 963 625 970 Q798 963 928 936" fill="none" stroke="url(#scarfrim)" stroke-width="24" opacity=".65"/>
+<path d="M360 1029 Q482 1072 598 1092" fill="none" stroke="#ff8b4d" stroke-width="9" opacity=".24"/>
+<!-- Git branch glyph -->
+<path d="M599 1021 V1132 L696 1069" fill="none" stroke="#fffdf9" stroke-width="23"/>
+<circle cx="599" cy="1018" r="24" fill="url(#scarf)" stroke="#fffdf9" stroke-width="18"/>
+<circle cx="599" cy="1137" r="24" fill="url(#scarf)" stroke="#fffdf9" stroke-width="18"/>
+<circle cx="697" cy="1069" r="24" fill="url(#scarf)" stroke="#fffdf9" stroke-width="18"/>
+<!-- scarf cloth folds -->
+<path d="M355 984 Q470 1046 622 1039 Q773 1029 893 985" fill="none" stroke="#ff6635" stroke-width="14" opacity=".55"/>
+<path d="M361 1067 Q487 1130 578 1180" fill="none" stroke="#a91d0d" stroke-width="13" opacity=".35"/>
+<!-- highlights on layered scarf folds -->
+<path d="M400 1100 Q510 1150 590 1194" fill="none" stroke="#ff8251" stroke-width="8" opacity=".33"/>
+<!-- leather seam detail and stitching -->
+<path d="M188 566 Q205 484 267 416" fill="none" stroke="#c68a5d" stroke-width="5" opacity=".55" stroke-dasharray="8 19"/>
+<path d="M1060 566 Q1043 484 981 416" fill="none" stroke="#c68a5d" stroke-width="5" opacity=".55" stroke-dasharray="8 19"/>
+<!-- small leather strap rivets -->
+<g fill="#d29a6a" stroke="#60301d" stroke-width="2">
+<circle cx="215" cy="536" r="5"/><circle cx="1033" cy="536" r="5"/>
+<circle cx="246" cy="473" r="4"/><circle cx="1002" cy="473" r="4"/>
+</g>
+<!-- goggles straps and lenses: nested optical/mechanical layers -->
+<path d="M299 305 C405 252 518 250 590 301 L568 379 C480 350 396 369 332 407Z" fill="url(#leather)" stroke-width="14"/>
+<path d="M949 305 C843 252 730 250 658 301 L680 379 C768 350 852 369 916 407Z" fill="url(#leather)" stroke-width="14"/>
+<path d="M588 288 C607 278 643 278 660 288 L661 372 C641 360 608 360 588 372Z" fill="url(#leather)" stroke-width="16"/>
+<path d="M604 303 Q622 299 643 303" fill="none" stroke="#c78c5b" stroke-width="8" opacity=".75"/>
+<g fill="#3d1e15" stroke="none"><circle cx="609" cy="326" r="4"/><circle cx="639" cy="326" r="4"/></g>
+<g id="goggle-left" transform="rotate(-17 427 346)">
+<ellipse cx="427" cy="346" rx="175" ry="95" fill="url(#leather)" stroke-width="19"/>
+<ellipse cx="427" cy="328" rx="170" ry="88" fill="url(#gold)" stroke="#6e3215" stroke-width="14"/>
+<ellipse cx="427" cy="329" rx="140" ry="68" fill="#f6b422" stroke="#6c391b" stroke-width="9"/><ellipse cx="427" cy="329" rx="132" ry="61" fill="url(#glass)" stroke="#754022" stroke-width="7"/>
+<path d="M348 374 C410 399 472 381 503 344 Q473 387 415 386 Q371 383 348 374Z" fill="url(#lensFacet)" stroke="none"/>
+<path d="M325 322 C353 292 400 281 445 284 C414 297 381 317 354 349 C339 352 329 342 325 322Z" fill="#fff" opacity=".85" stroke="none"/>
+<path d="M398 285 C451 280 487 294 517 317 C488 309 466 313 450 323" fill="url(#lensSheen)" stroke="none"/>
+<path d="M326 363 C343 341 361 336 378 335" fill="none" stroke="#b6f6ff" stroke-width="16" opacity=".8"/>
+<path d="M312 374 Q427 416 535 356" fill="none" stroke="#ffe169" stroke-width="7" opacity=".55"/>
+<path d="M290 326 C301 274 354 251 420 246" fill="none" stroke="#fff7b3" stroke-width="8" opacity=".85"/>
+</g>
+<g id="goggle-right" transform="rotate(17 821 346)">
+<ellipse cx="821" cy="346" rx="175" ry="95" fill="url(#leather)" stroke-width="19"/>
+<ellipse cx="821" cy="328" rx="170" ry="88" fill="url(#gold)" stroke="#6e3215" stroke-width="14"/>
+<ellipse cx="821" cy="329" rx="140" ry="68" fill="#f6b422" stroke="#6c391b" stroke-width="9"/><ellipse cx="821" cy="329" rx="132" ry="61" fill="url(#glass)" stroke="#754022" stroke-width="7"/>
+<path d="M742 374 C804 399 866 381 897 344 Q867 387 809 386 Q765 383 742 374Z" fill="url(#lensFacet)" stroke="none"/>
+<path d="M718 322 C746 292 793 281 838 284 C807 297 774 317 747 349 C732 352 722 342 718 322Z" fill="#fff" opacity=".85" stroke="none"/>
+<path d="M792 285 C845 280 881 294 911 317 C882 309 860 313 844 323" fill="url(#lensSheen)" stroke="none"/>
+<path d="M720 363 C738 341 757 336 774 335" fill="none" stroke="#b6f6ff" stroke-width="16" opacity=".8"/>
+<path d="M706 374 Q821 416 929 356" fill="none" stroke="#ffe169" stroke-width="7" opacity=".55"/>
+<path d="M685 326 C696 274 749 251 815 246" fill="none" stroke="#fff7b3" stroke-width="8" opacity=".85"/>
+</g>
+</g>
+</svg>
