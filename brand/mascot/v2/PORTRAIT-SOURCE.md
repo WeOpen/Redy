@@ -1,11 +1,24 @@
-# Redy 2.0 portrait — approved raster reference and tracing workflow
+# Redy 2.0 portrait — source of truth and tracing status
 
-Reference: single forward-facing head portrait generated in the Redy 2.0 design conversation (2026-11-03), showing gold-rimmed blue goggles, orange-red three-tuft forelock, cream ears and muzzle, glossy brown eyes, smile and red Git scarf.
+## Uploaded reference assets
 
-**Source binary status:** the original PNG is not yet committed to this repository. Do not substitute the earlier geometric SVG for this reference. The raster source and vector-trace export are available as conversation artifacts and must be imported into this branch together, using:
-- `brand/mascot/v2/source/redy-2-portrait-reference.png`
-- `brand/mascot/v2/redy-2-portrait-vector-trace.svg`
+All four assets below are now committed on `feat/redy-2-brand-refresh`:
 
-**Important:** automated color-contour vector tracing preserves image geometry better than a newly invented geometric icon, but introduces many polygon paths, hard color banding, and potential artifacts. It is an intermediate tracing asset, not a production-grade hand-optimized SVG master.
+| Role | Path | Review status |
+| --- | --- | --- |
+| Original generated portrait | `source/redy-2-portrait-reference.png` | Primary **visual reference** |
+| Editable Bézier reconstruction | `redy-2-portrait-bezier-v13.svg` | Candidate; needs visual approval |
+| Rendered vector preview | `previews/redy-2-svg-preview-v13.png` | QA preview of candidate |
+| Original vs vector comparison | `previews/redy-2-reference-v13-comparison.png` | QA comparison |
 
-Review the SVG at 100%, 50%, 25% and 16–64 px. For final delivery, redraw smooth paths, fix gradients and edge fidelity, and validate against the PNG overlay. Only then update active site references and icon exports. The PR stays draft until the source PNG and approved vector master are actually committed.
+The source PNG is the visual reference, while the SVG consists of editable vector paths, gradients and shapes rather than embedded raster artwork. **The SVG does not yet match the reference 1:1** and is not approved as a production icon.
+
+## Validation before production
+
+- Compare outline, goggles, eye placement, cheek patterns, smile and scarf at 100% and 200%.
+- Verify SVG rendering at 512, 128, 64, 32 and 16 px on light/dark backgrounds.
+- Export transparent icon variants from an *approved* SVG master, not the reference PNG or a design-board crop.
+- Update website, mobile icons, favicon and brand exports only after passing the icon review.
+- Preserve the older mascot art in Git history. Independent WeMail, WeGit and WeOpen product icons should not be overwritten.
+
+Current site preview: `app/_components/sections/visual-system-section.tsx` shows the reference image and V13 SVG render side by side, and marks older full-body/Q art as pending replacement.
