@@ -70,8 +70,10 @@ describe('HomePage', () => {
 
     expect(screen.getByAltText(/Redy Logo Lockup/i)).toBeInTheDocument();
     expect(screen.getByAltText(/Redy GitHub Header 主视觉/i)).toBeInTheDocument();
-    expect(screen.getByAltText(/Redy 社区贴纸/i)).toBeInTheDocument();
-    expect(screen.getByAltText(/Redy 表情包/i)).toBeInTheDocument();
+    expect(screen.getByAltText(/Redy 1\.0 标准角色立绘/i)).toBeInTheDocument();
+    expect(screen.getByAltText(/Redy 1\.0 Q 版角色/i)).toBeInTheDocument();
+    expect(screen.getByAltText(/Redy 2\.0 原始头像 PNG/i)).toBeInTheDocument();
+    expect(screen.getByAltText(/Redy 2\.0 V13 SVG 矢量渲染预览/i)).toBeInTheDocument();
     expect(screen.getByText(/温和看待技术，严谨对待代码/i)).toBeInTheDocument();
     expect(screen.getByRole('link', { name: /打开 WeMail 项目/i })).toHaveAttribute(
       'href',
@@ -92,13 +94,17 @@ describe('HomePage', () => {
     expect(screen.queryByText(/Git 协作与版本演化工具/i)).not.toBeInTheDocument();
   });
 
-  it('shows sticker and expression pack previews in the visual gallery', () => {
+  it('shows V2 portrait sources alongside legacy artwork during migration', () => {
     render(<HomePage />);
 
-    expect(screen.getByText('社区贴纸')).toBeInTheDocument();
-    expect(screen.getByText('表情包')).toBeInTheDocument();
-    expect(screen.queryByText('标准立绘')).not.toBeInTheDocument();
-    expect(screen.queryByText('轻量化形态')).not.toBeInTheDocument();
+    expect(screen.getByText('Redy 2.0 · 原始头像参考')).toBeInTheDocument();
+    expect(screen.getByText(/Redy 2\.0 · SVG V13 候选稿/i)).toBeInTheDocument();
+    expect(screen.getByText('1.0 标准角色 · 待替换')).toBeInTheDocument();
+    expect(screen.getByText('1.0 Q 版角色 · 待替换')).toBeInTheDocument();
+    expect(screen.getByRole('link', { name: '查看 SVG 源文件' })).toHaveAttribute(
+      'href',
+      'https://github.com/WeOpen/Redy/blob/feat/redy-2-brand-refresh/brand/mascot/v2/redy-2-portrait-bezier-v13.svg',
+    );
   });
 
   it('connects the phase 4 homepage hero to GitHub and README visual assets', () => {
