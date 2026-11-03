@@ -34,3 +34,21 @@ jobs:
         run: npm run build
         env:
           GITHUB_ACTIONS: 'true'
+
+      - name: Setup Python for icon exports
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install SVG renderer
+        run: python -m pip install --disable-pip-version-check cairosvg==2.7.1 pillow==11.1.0
+
+      - name: Verify PNG exports of adaptive Redy icons
+        run: python scripts/export-redy-2-icons.py --output-dir ./exported/redy-2-icons
+
+      - name: Upload icon previews for visual review
+        uses: actions/upload-artifact@v4
+        with:
+          name: redy-2-candidate-icon-pngs
+          path: ./exported/redy-2-icons/*.png
+          retention-days: 14
